@@ -3,8 +3,7 @@ import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from '@components/home/home.component';
-
+import { HomeModule } from '@components/home/home.module';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -15,11 +14,12 @@ import { HomeComponent } from '@components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
   ],
   imports: [
     NativeScriptModule,
     AppRoutingModule,
+
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
