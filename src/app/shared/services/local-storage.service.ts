@@ -7,7 +7,7 @@ export class LocalStorageService {
   storage: Storage;
 
   constructor() {
-    this.supported = Storage !== void (0);
+    this.supported = Storage != null && Storage !== void (0);
     this.storage = window.localStorage;
   }
 

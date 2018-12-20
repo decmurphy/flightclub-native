@@ -9,11 +9,12 @@ import { CdkModule } from './cdk.module';
 import {
   CesiumComponent
 } from '@components/cesium';
-
+*/
 import {
-  GithubComponent, LinkedinComponent, PatreonComponent, TwitterComponent,
+  PatreonComponent
+  // GithubComponent, LinkedinComponent, TwitterComponent,
 } from '@components/icons';
-
+/*
 import {
   LiveSidenavComponent
 } from '@components/live/live-sidenav/live-sidenav.component';
@@ -37,9 +38,8 @@ import {
 /*
     GithubComponent,
     LinkedinComponent,
-    PatreonComponent,
-    TwitterComponent
-    */
+    */PatreonComponent
+    // TwitterComponent
   ],
   providers: [
     LoadScreenService
@@ -57,9 +57,8 @@ import {
 /*
     GithubComponent,
     LinkedinComponent,
-    PatreonComponent,
-    TwitterComponent
-    */
+    */PatreonComponent
+    // TwitterComponent
   ],
 })
 export class SharedModule { }

@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Subscription, timer } from 'rxjs';
 
-import { Messages } from '@shared/interfaces';
+import { messages } from './load-screen.messages.json';
 
 @Injectable()
 export class LoadScreenService {
@@ -10,29 +9,22 @@ export class LoadScreenService {
   _loading: boolean;
   _loadingMessage: string;
   page: string;
-  messages: Messages;
   geoPatrons: any[];
 
-  constructor(
-      private http: HttpClient
-  ) {
+  constructor( ) {
         this._loading = false;
         this._loadingMessage = '';
 
-        this.http.get('/assets/load-screen.messages.json').toPromise()
-            .then((json: any) => {
-                this.messages = json.messages;
-                if (this.geoPatrons) {
-                    this.addPatronsToLoadScreen(this.geoPatrons);
-                }
-            });
+        if (this.geoPatrons) {
+            this.addPatronsToLoadScreen(this.geoPatrons);
+        }
 
     }
 
     addPatronsToLoadScreen(geoPatrons: any[]) {
-        if (this.messages) {
-            Object.keys(this.messages).forEach(key => {
-                this.messages[key].unshift({
+        if (messages) {
+            Object.keys(messages).forEach(key => {
+                messages[key].unshift({
                     'p': 0.95,
                     'message': 'A huge thank you to my GEO Patrons for supporting Flight Club!'
                         + '<ul><li>' + geoPatrons.join('</li><li>') + '</li></ul>'
@@ -53,12 +45,12 @@ export class LoadScreenService {
 
   initiateRoller(page): void {
 
-      if (this.messages === undefined) {
+      if (messages === undefined) {
           this.page = page;
           return;
       }
 
-      const messageArray = this.messages[page] || this.messages['build'];
+      const messageArray = messages[page] || messages['build'];
       let i = 0;
       this._loadingMessage = messageArray[i].message;
 

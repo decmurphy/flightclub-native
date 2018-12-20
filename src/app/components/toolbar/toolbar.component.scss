@@ -1,0 +1,19 @@
+span {
+    height: 100%;
+}
+
+button:not(.patreonLogin) {
+    height: 100%;
+}
+
+img {
+    &.logo {
+        vertical-align: middle;
+        height: 48px;
+    }
+    &.patreonImage {
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+    }
+}

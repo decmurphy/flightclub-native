@@ -24,7 +24,7 @@ export class PatreonService {
     private utilityService: UtilityService
   ) {
     const storedGeoPledges = this.localStorageService.get('fc_geoPledges');
-    if (storedGeoPledges) {
+    if (storedGeoPledges != null && storedGeoPledges !== '') {
       const geoPledges = JSON.parse(storedGeoPledges);
       this.loadScreenService.addPatronsToLoadScreen(geoPledges.map(p => p.name));
     }

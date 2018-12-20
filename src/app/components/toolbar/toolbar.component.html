@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+
+    <button mat-icon-button aria-label="Menu" (click)="toggleNav('menu')" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <button mat-button aria-label="Home" (click)="router.navigate(['/'])">
+        <img class=logo alt="Flight Club Logo" src='/assets/img/logo-sm.svg'>
+    </button>
+
+    <span fxHide.xs fxHide.sm>
+        <button mat-button aria-label="Build" (click)="router.navigate(['/build'])">
+            <div fxFlexFill fxLayout="column" fxLayoutAlign="center">Simulate</div>
+        </button>
+        <button mat-button aria-label="Live" (click)="router.navigate(['/live'])">
+            <div fxFlexFill fxLayout="column" fxLayoutAlign="center">Live</div>
+        </button>
+        <button mat-button aria-label="Media" (click)="router.navigate(['/media'])">
+            <div fxFlexFill fxLayout="column" fxLayoutAlign="center">Media</div>
+        </button>
+        <button mat-button aria-label="API Docs" (click)="redirectTo('https://docs.flightclub.io')">
+            <div fxFlexFill fxLayout="column" fxLayoutAlign="center">API Docs</div>
+        </button>
+        <button mat-button aria-label="About" (click)="router.navigate(['/about'])">
+            <div fxFlexFill fxLayout="column" fxLayoutAlign="center">About</div>
+        </button>
+        <button mat-button aria-label="Patreon" (click)="redirectTo('https://www.patreon.com/flightclub')">
+            <div fxFlexFill fxLayout="column" fxLayoutAlign="center" style="color:#ccac55">Patreon</div>
+        </button>
+        <button mat-button aria-label="Patreon" *ngIf="userService.hasRole('admin')" (click)="router.navigate(['/patrons'], { queryParams: {'id':'GEO+GTO'} })">
+            <div fxFlexFill fxLayout="column" fxLayoutAlign="center" style="color:#ccac55">Patrons</div>
+        </button>
+    </span>
+
+    <span fxFlex></span>
+
+    <button mat-icon-button *ngIf="userService.loggedInUser.patron" (click)="router.navigate(['/account'])" fxHide.xs fxHide.sm>
+        <img class=patreonImage src="{{userService.loggedInUser.patron.imageUrl}}" alt="Account">
+    </button>
+    <button mat-raised-button *ngIf="!userService.loggedInUser.patron" class="patreonLogin" (click)="patreonService.loginWithPatreon()" fxHide.xs fxHide.sm>
+        <mat-icon>
+            <fc-patreon></fc-patreon>
+        </mat-icon>
+        <span>Log in with Patreon</span>
+    </button>
+
+</mat-toolbar>
