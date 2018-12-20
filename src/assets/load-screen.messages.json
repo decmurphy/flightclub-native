@@ -1,0 +1,45 @@
+{
+    "messages": {
+        "build": [
+            { "p": 0.7, "message": "Getting data from r/SpaceX..." },
+            { "p": 0.7, "message": "Rebuilding Amos-6..." },
+            { "p": 0.5, "message": "Follow me on Twitter: <a href='https://www.twitter.com/flightclubio' target='_blank'>@flightclubio</a>" },
+            { "p": 0.5, "message": "Killing Church..." },
+            { "p": 0.2, "message": "Turtling FoxhoundBat..." },
+            { "p": 0.2, "message": "YVAN EHT NIOJ" },
+            { "p": 0.2, "message": "Impersonating Benjamin Klein..." },
+            { "p": 0.6, "message": "Wake up, John..." },
+            { "p": 0.1, "message": "SUBLIMINAL MESSAGES" },
+            { "p": 0.8, "message": "In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move." },
+            { "p": 0.8, "message": "☠☠☠ Give it up jiggy make it feel like foreplay / Yo my cardio is infinite / Ha ha / Big willie style\"s all in it / Gettin jiggy wit it / Na na na na na na na nana ☠☠☠" }
+        ],
+        "result": [
+            { "p": 0.5, "message": "Follow me on Twitter: <a href='https://www.twitter.com/flightclubio' target='_blank'>@flightclubio</a>" },
+            { "p": 0.2, "message": "Engine Chill" },
+            { "p": 0.2, "message": "Terminal Count" },
+            { "p": 0.2, "message": "Main Engine Start" },
+            { "p": 0.5, "message": "Liftoff!" },
+            { "p": 0.3, "message": "Vehicle is supersonic" },
+            { "p": 0.3, "message": "Vehicle is passing through Max Q" },
+            { "p": 0.6, "message": "MECO!" },
+            { "p": 0.3, "message": "Stage separation. Good luck Stage 1..." },
+            { "p": 0.5, "message": "Upper stage ignition" },
+            { "p": 0.5, "message": "Boostback looks good" },
+            { "p": 0.4, "message": "Entry burn is complete" },
+            { "p": 0.3, "message": "Landing burn has begun" },
+            { "p": 0.6, "message": "LZ-1, The Falcon has landed" },
+            { "p": 0.5, "message": "We have SECO!" }
+        ],
+        "live": [
+            { "p": 0.8, "message": "Getting data from r/SpaceX..." },
+            { "p": 0.4, "message": "Killing Church..." },
+            { "p": 0.8, "message": "Literally downloading the entire planet." },
+            { "p": 0.2, "message": "Have some patience, dammit" },
+            { "p": 0.5, "message": "Follow me on Twitter: <a href='https://www.twitter.com/flightclubio' target='_blank'>@flightclubio</a>" },
+            { "p": 0.3, "message": "YVAN EHT NIOJ" },
+            { "p": 0.8, "message": "Downloading trajectory data files..." },
+            { "p": 0.2, "message": "Damn your internet is slow, man" },
+            { "p": 0.2, "message": "I hope your browser can handle this" }
+        ]
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "plots": [{
+            "id": "altitude1",
+            "stages": [],
+            "title": "Altitude (km)",
+            "events": true,
+            "x": { "axis": "time", "label": "Time (s)", "type": "linear", "range": [0, 600] },
+            "y": [{ "axis": "altitude", "label": "Altitude (km)", "type": "linear" }]
+        },
+        {
+            "id": "profile1",
+            "stages": [],
+            "title": "Profile",
+            "events": true,
+            "x": { "axis": "downrangeDistance", "label": "Downrange (km)", "type": "linear", "range": [0, 250] },
+            "y": [{ "axis": "altitude", "label": "Altitude (km)", "type": "linear", "range": [0, 200] }]
+        },
+        {
+            "id": "latitude",
+            "stages": [],
+            "title": "Latitude",
+            "events": false,
+            "x": { "axis": "time", "label": "Time (s)", "type": "linear", "range": [0, 600] },
+            "y": [
+                { "axis": "latitude", "label": "Latitude (°)", "type": "linear", "range": [-180, 180] },
+                { "axis": "longitude", "label": "Longitude (°)", "type": "linear", "range": [-180, 180] }
+            ]
+        },
+        {
+            "id": "velocity1",
+            "stages": [],
+            "title": "Velocity",
+            "events": true,
+            "x": { "axis": "time", "label": "Time (s)", "type": "linear", "range": [0, 600] },
+            "y": [{ "axis": "velocity", "label": "Velocity (m/s)", "type": "linear" }]
+        },
+        {
+            "id": "prop",
+            "stages": [],
+            "title": "Propellant Mass",
+            "events": false,
+            "x": { "axis": "time", "label": "Time (s)", "type": "log" },
+            "y": [{ "axis": "propellantMass", "label": "Propellant Mass (t)", "type": "log" }]
+        },
+        {
+            "id": "phase1",
+            "stages": [],
+            "title": "Booster Phasespace",
+            "events": true,
+            "x": { "axis": "velocity", "label": "Velocity (m/s)", "type": "linear" },
+            "y": [{ "axis": "altitude", "label": "Altitude (km)", "type": "linear" }]
+        },
+        {
+            "id": "throttle",
+            "stages": [],
+            "title": "Throttle",
+            "events": false,
+            "x": { "axis": "time", "label": "Time (s)", "type": "linear", "range": [0, 600] },
+            "y": [{ "axis": "throttle", "label": "Throttle", "type": "linear", "range": [0, 1] }]
+        },
+        {
+            "id": "accel1",
+            "stages": [],
+            "title": "Acceleration",
+            "events": true,
+            "x": { "axis": "time", "label": "Time (s)", "type": "linear", "range": [0, 600] },
+            "y": [{ "axis": "acceleration", "label": "Acceleration (g)", "type": "linear" }]
+        },
+        {
+            "id": "q",
+            "stages": [],
+            "title": "Aerodynamic Pressure",
+            "events": true,
+            "x": { "axis": "time", "label": "Time (s)", "type": "linear", "range": [0, 600] },
+            "y": [{ "axis": "aerodynamicPressure", "label": "Aerodynamic Pressure (Q) (kN/m^2)", "type": "linear" }]
+        },
+        {
+            "id": "aoa",
+            "stages": [],
+            "title": "Angle of Attack",
+            "events": true,
+            "x": { "axis": "time", "label": "Time (s)", "type": "linear", "range": [0, 600] },
+            "y": [{ "axis": "angleOfAttack", "label": "Angle of Attack (°)", "type": "linear", "range": [-90, 90] }]
+        },
+        {
+            "id": "aov",
+            "stages": [],
+            "title": "Angle of Velocity Vector",
+            "events": true,
+            "x": { "axis": "time", "label": "Time (s)", "type": "linear", "range": [0, 600] },
+            "y": [{ "axis": "angleOfVelocity", "label": "Angle (° rel. to surface)", "type": "linear", "range": [-90, 90] }]
+        },
+        {
+            "id": "total-dv",
+            "stages": [],
+            "title": "Total ΔV Expended",
+            "events": false,
+            "x": { "axis": "time", "label": "Time (s)", "type": "log" },
+            "y": [{ "axis": "deltaVTotal", "label": "Total ΔV (m/s)", "type": "log" }]
+        },
+        {
+            "id": "aop",
+            "stages": [],
+            "title": "Elevation",
+            "events": true,
+            "x": { "axis": "time", "label": "Time (s)", "type": "linear", "range": [0, 600] },
+            "y": [{ "axis": "elevation", "label": "Elevation (°)", "type": "linear", "range": [-90, 90] }]
+        },
+        {
+            "id": "heading",
+            "stages": [],
+            "title": "Azimuth",
+            "events": true,
+            "x": { "axis": "time", "label": "Time (s)", "type": "linear", "range": [0, 600] },
+            "y": [{ "axis": "azimuth", "label": "Azimuth (° cc from East)", "type": "linear", "range": [-180, 180] }]
+        },
+        {
+            "id": "drag",
+            "stages": [],
+            "title": "Drag Coefficient",
+            "events": true,
+            "x": { "axis": "time", "label": "Time (s)", "type": "linear", "range": [0, 600] },
+            "y": [{ "axis": "dragCoefficient", "label": "Drag Coefficient", "type": "linear" }]
+        }
+    ]
+}

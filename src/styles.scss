@@ -1,4 +1,131 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+/* Typography must be first custom import as it includes mat-core() */
+
+@import '~@angular/material/theming';
+@import "typography";
 // Import common styles
 @import 'app-common';
+@import "fc-theme";
+
+/* Primary content area */
+
+[hidden] {
+    display: none !important;
+}
+
+html,
+body {
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: $accent;
+}
+
+hr {
+    width: 90%;
+    border-color: $accent;
+}
+
+mat-spinner.icon-style {
+    width: 24px !important;
+    height: 24px !important;
+    margin: 6px auto;
+    svg {
+        width: 24px !important;
+        height: 24px !important;
+        transform-origin: 12px !important;
+    }
+    circle {
+        stroke: $accent;
+    }
+}
+
+.large-icon {
+    &.wide {
+        width: 200px;
+    }
+    .mat-icon {
+        width: 48px !important;
+        height: 48px !important;
+        transform-origin: 24px !important;
+        margin: 12px auto;
+    }
+    .material-icons {
+        font-size: 48px;
+    }
+    mat-spinner {
+        width: 48px !important;
+        height: 48px !important;
+        margin: 12px auto;
+        svg {
+            width: 48px !important;
+            height: 48px !important;
+            transform-origin: 24px !important;
+        }
+    }
+}
+
+mat-sidenav {
+    width: 250px;
+    mat-spinner path {
+        stroke: $accent;
+    }
+}
+
+.mat-list .mat-list-item {
+    .mat-list-item-content {
+        width: 100%;
+        padding: 0 24px;
+    }
+    &.clickable_list {
+        cursor: pointer;
+        &:hover {
+            background-color: #7b7b7b;
+        }
+    }
+}
+
+.menu-button {
+    position: fixed !important;
+    z-index: 2;
+    bottom: 16px;
+    right: 16px;
+}
+
+mat-divider {
+    border-width: 1px !important;
+    &.gold-divider {
+        border-color: $accent !important;
+    }
+}
+
+.mat-form-field.mat-focused {
+    .mat-form-field-label {
+        color: $accent;
+    }
+    .mat-form-field-ripple {
+        background-color: $accent;
+    }
+    .mat-input-element {
+        caret-color: $accent;
+    }
+}
+
+.patreonLogin {
+    background-color: rgb(249, 104, 84);
+    color: white;
+    font-family: 'Brandon Regular' !important;
+    text-transform: uppercase;
+    mat-icon {
+        margin-right: 32px;
+    }
+}

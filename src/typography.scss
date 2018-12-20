@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'BrandonGrotesque-Light';
+    src: url('fonts/BrandonGrotesque-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BrandonGrotesque-Regular';
+    src: url('fonts/BrandonGrotesque-Regular.otf') format('opentype');
+}
+
+$custom-typography: mat-typography-config( $font-family: 'BrandonGrotesque-Regular');
+@include mat-core($custom-typography);
+@mixin typography($ratio) {
+    .mat-display-4 {
+        font-size: calc(#{$ratio}*112px) !important;
+        line-height: calc(#{$ratio}*112px) !important;
+    }
+    .mat-display-3 {
+        font-size: calc(#{$ratio}*56px) !important;
+        line-height: calc(#{$ratio}*56px) !important;
+    }
+    .mat-display-2 {
+        font-size: calc(#{$ratio}*45px) !important;
+        line-height: calc(#{$ratio}*48px) !important;
+    }
+    .mat-display-1 {
+        font-size: calc(#{$ratio}*34px) !important;
+        line-height: calc(#{$ratio}*40px) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    @include typography($ratio: 0.4);
+}
+
+@media (min-width: 601px) and (max-width: 960px) {
+    @include typography($ratio: 0.7);
+}
+
+@media (min-width: 961px) {
+    @include typography($ratio: 1);
+}
