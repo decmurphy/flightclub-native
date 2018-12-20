@@ -21,6 +21,15 @@
             "~/*": [
                 "src/*"
             ],
+            "@env/*": [
+                "src/environments/*"
+            ],
+            "@components/*": [
+                "src/app/components/*"
+            ],
+            "@shared/*": [
+                "src/app/shared/*"
+            ],
             "*": [
                 "./node_modules/tns-core-modules/*",
                 "./node_modules/*"
