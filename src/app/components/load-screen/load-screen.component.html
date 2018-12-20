@@ -1,0 +1,16 @@
+<div class=container fxLayout=column fxLayoutAlign="space-around center" fxLayoutGap=10px>
+    <div fxLayout=column fxLayoutAlign="center center" fxLayoutGap=30px>
+        <div class="mat-display-3" *ngIf="header">{{header}}</div>
+        <!-- <p> needs to have a min-height of the largest LoadScreenMessage (i.e. the Patreon thank you) -->
+        <p style="min-height:250px" [innerHTML]="getLoadScreenMessage()"></p>
+    </div>
+    <div class='loading'>
+        <div class='loading__square'></div>
+        <div class='loading__square'></div>
+        <div class='loading__square'></div>
+        <div class='loading__square'></div>
+        <div class='loading__square'></div>
+        <div class='loading__square'></div>
+        <div class='loading__square'></div>
+    </div>
+</div>

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -18,11 +17,11 @@ import {
 import {
   LiveSidenavComponent
 } from '@components/live/live-sidenav/live-sidenav.component';
-
+*/
 import {
   LoadScreenComponent, LoadScreenService
 } from '@components/load-screen';
-*/
+
 @NgModule({
   imports: [
     CommonModule,
@@ -34,8 +33,8 @@ import {
     /*
     CesiumComponent,
     LiveSidenavComponent,
-    LoadScreenComponent,
-
+    */LoadScreenComponent,
+/*
     GithubComponent,
     LinkedinComponent,
     PatreonComponent,
@@ -43,7 +42,7 @@ import {
     */
   ],
   providers: [
-    // LoadScreenService
+    LoadScreenService
   ],
   exports: [
     FlexLayoutModule,
@@ -53,9 +52,9 @@ import {
     CesiumComponent,
 
     LiveSidenavComponent,
-
+*/
     LoadScreenComponent,
-
+/*
     GithubComponent,
     LinkedinComponent,
     PatreonComponent,

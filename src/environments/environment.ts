@@ -3,7 +3,27 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  client: {
+      protocol: 'http',
+      host: 'localhost',
+      port: '4200'
+  },
+  server: {
+      protocol: 'http',
+      host: 'localhost',
+      port: '8080'
+  },
+  baseUrl: '/',
+  enableDebug: true,
+  cesium: {
+    bingMapsApiDefaultKey: 'Atr1lJvbFdMUnJ6fw4qGKDcZuEjzVRh-6WLmrRZDcCggpZIPH9sdEyUWGWXO1kPc',
+    ionAccessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4MTA1NjVmNy0zZWFkLTQ5NWItOWFiYy1hYjY2MDMwZmEzNDEiLCJpZCI6MjkwMywiaWF0IjoxNTM1MTA2MzQwfQ.Q5ET4GSG3SS3uNyzpwQWGGa1EParGZudTY0JSlpMZ8M'
+  },
+  patreon: {
+    client_id: 'Y6971JRoufFRjLqGzzNZuQFdgXtbJgzb4MHX2nzU32gzqckRsaO4uL9i9fUcoP8k',
+    redirect_uri: '/patreon/auth/callback'
+  }
 };
 
 /*
