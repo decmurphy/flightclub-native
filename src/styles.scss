@@ -6,8 +6,8 @@
 @import '~@angular/material/theming';
 @import "typography";
 // Import common styles
-@import 'app-common';
-@import "fc-theme";
+// @import 'app-common';
+@import "theme-web";
 
 /* Primary content area */
 
@@ -123,7 +123,6 @@ mat-divider {
 .patreonLogin {
     background-color: rgb(249, 104, 84);
     color: white;
-    font-family: 'Brandon Regular' !important;
     text-transform: uppercase;
     mat-icon {
         margin-right: 32px;

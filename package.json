@@ -4,6 +4,9 @@
     "id": "org.nativescript.flightclubnative",
     "tns-android": {
       "version": "5.1.0"
+    },
+    "tns-ios": {
+      "version": "5.1.0"
     }
   },
   "version": "0.0.0",
@@ -35,6 +38,7 @@
     "core-js": "^2.5.4",
     "moment": "^2.23.0",
     "nativescript-angular": "~7.0.0",
+    "nativescript-theme-core": "^1.0.4",
     "reflect-metadata": "~0.1.8",
     "rxjs": "^6.2.0",
     "tns-core-modules": "~5.0.0",
