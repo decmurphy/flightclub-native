@@ -28,7 +28,8 @@ import {
   HomeModule,
   // LiveModule, MediaModule,
   UserModule,
-  // MenuSidenavComponent, RunSimulationComponent, ErrorComponent,
+  MenuSidenavComponent,
+  // RunSimulationComponent, ErrorComponent,
   ToolbarComponent
   // PhotographerSettingsDlgComponent, PatronsComponent
 } from '@components/index';
@@ -37,6 +38,7 @@ import {
   declarations: [
     AppComponent,
 
+    MenuSidenavComponent,
     ToolbarComponent,
   ],
   imports: [

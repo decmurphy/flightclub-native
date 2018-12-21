@@ -1,0 +1,56 @@
+<mat-sidenav-container fxFlex>
+    <mat-sidenav #menu fixedInViewport [fixedTopGap]="fixedTopGap">
+        <mat-nav-list fxLayout=column fxFlex>
+            <a mat-list-item (click)="sidenavService.toggleNav('menu')" routerLink="/">
+                <mat-icon>home</mat-icon>
+                <p>Home</p>
+            </a>
+            <a mat-list-item (click)="sidenavService.toggleNav('menu')" routerLink="/build">
+                <mat-icon>build</mat-icon>
+                <p>Simulate</p>
+            </a>
+            <a mat-list-item (click)="sidenavService.toggleNav('menu')" routerLink="/live">
+                <mat-icon>live_tv</mat-icon>
+                <p>Live</p>
+            </a>
+            <a mat-list-item (click)="sidenavService.toggleNav('menu')" routerLink="/media">
+                <mat-icon>forum</mat-icon>
+                <p>Media</p>
+            </a>
+            <a mat-list-item (click)="sidenavService.toggleNav('menu')" href="http://docs.flightclub.io" target="_blank">
+                <mat-icon>http</mat-icon>
+                <p>Flight Club API Docs</p>
+            </a>
+            <a mat-list-item (click)="sidenavService.toggleNav('menu')" routerLink="/about">
+                <img src='/assets/img/profile_pic_3.png'>
+                <p>About Declan</p>
+            </a>
+            <a mat-list-item (click)="sidenavService.toggleNav('menu')" href="https://www.patreon.com/flightclub" target="_blank">
+                <mat-icon>
+                    <fc-patreon></fc-patreon>
+                </mat-icon>
+                <p>Support me on Patreon!</p>
+            </a>
+            <a mat-list-item (click)="sidenavService.toggleNav('menu')" *ngIf="userService.hasRole('admin')" routerLink="/patreon?id=GEO+GTO">
+                <mat-icon>
+                    <fc-patreon></fc-patreon>
+                </mat-icon>
+                <p>Patrons</p>
+            </a>
+            <span fxFlex></span>
+            <a mat-list-item *ngIf="userService.isLoggedIn()" (click)="sidenavService.toggleNav('menu')" routerLink="/account">
+                <mat-icon>person</mat-icon>
+                <p>Account</p>
+            </a>
+            <a mat-list-item *ngIf="!userService.isLoggedIn()" class="patreonLogin clickable_list" (click)="patreonService.loginWithPatreon()">
+                <mat-icon>
+                    <fc-patreon></fc-patreon>
+                </mat-icon>
+                <span>Log in</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <ng-content></ng-content>
+    </mat-sidenav-content>
+</mat-sidenav-container>

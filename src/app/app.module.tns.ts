@@ -29,12 +29,15 @@ import {
   ToolbarComponent,
   // PhotographerSettingsDlgComponent, PatronsComponent
 } from '@components/index';
+import { MenuSidenavComponent } from './components/menu-sidenav/menu-sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
 
-    ToolbarComponent
+    ToolbarComponent,
+
+    MenuSidenavComponent
   ],
   imports: [
     NativeScriptModule,

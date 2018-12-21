@@ -7,7 +7,7 @@ export * from './home';
 export * from './load-screen';
 // export * from './live';
 // export * from './media';
-// export * from './menu-sidenav';
+export * from './menu-sidenav';
 // export * from './patrons';
 // export * from './result';
 // export * from './run-simulation';

@@ -1,2 +1,14 @@
 <ActionBar class='action-bar' title="toolbar works!"></ActionBar>
-<Label class='body' text="Welcome to {{ title }}!" textWrap="true"></Label>
+<ScrollView orientation="vertical">
+    <FlexboxLayout class='page p-5' flexDirection=column>
+        <Image src="~/assets/img/logo-lg.png"></Image>
+        <FlexboxLayout flexWrap=wrap justifyContent='space-around'>
+            <Button flexGrow=1 class="btn btn-primary" text="Create Simulations" (tap)="onTap($event)"></Button>
+            <Button flexGrow=1 class="btn btn-primary" text="Watch a Simulation Live!" (tap)="onTap($event)"></Button>
+        </FlexboxLayout>
+        <FlexboxLayout flexWrap=wrap justifyContent='space-around'>
+            <Button flexGrow=1 text="About Me" (tap)="onTap($event)"></Button>
+            <Button flexGrow=1 class="btn" text="Flight Club in the Media" (tap)="onTap($event)"></Button>
+        </FlexboxLayout>
+    </FlexboxLayout>
+</ScrollView>
