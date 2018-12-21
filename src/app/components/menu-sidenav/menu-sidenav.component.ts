@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 
@@ -42,6 +42,6 @@ export class MenuSidenavComponent implements OnInit {
 
   hasRole(role: string): boolean {
     return this.userService.hasRole(role);
-  }
+}
 
 }

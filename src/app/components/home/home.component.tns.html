@@ -1,14 +1,21 @@
-<ActionBar class='action-bar' title="toolbar works!"></ActionBar>
+<ActionBar class='action-bar' title="test">
+    <NavigationButton *ngIf="isAndroid()" icon="res://baseline_menu_white_24"></NavigationButton>
+    <ActionItem *ngIf="isIOS()" icon="res://baseline_menu_white_24" ios.position="left"></ActionItem>
+    <StackLayout orientation="horizontal" ios:horizontalAlignment="center" android:horizontalAlignment="left">
+        <Label text='Flight Club'></Label>
+    </StackLayout>
+</ActionBar>
 <ScrollView orientation="vertical">
     <FlexboxLayout class='page p-5' flexDirection=column>
         <Image src="~/assets/img/logo-lg.png"></Image>
-        <FlexboxLayout flexWrap=wrap justifyContent='space-around'>
-            <Button flexGrow=1 class="btn btn-primary" text="Create Simulations" (tap)="onTap($event)"></Button>
-            <Button flexGrow=1 class="btn btn-primary" text="Watch a Simulation Live!" (tap)="onTap($event)"></Button>
+        <FlexboxLayout flexDirection=column>
+            <Button class="btn btn-primary btn-rounded-sm" text="Create Simulations" (tap)="onTap($event)"></Button>
+            <Button class="btn btn-primary btn-rounded-sm" text="Watch a Simulation Live!" (tap)="onTap($event)"></Button>
         </FlexboxLayout>
-        <FlexboxLayout flexWrap=wrap justifyContent='space-around'>
-            <Button flexGrow=1 text="About Me" (tap)="onTap($event)"></Button>
-            <Button flexGrow=1 class="btn" text="Flight Club in the Media" (tap)="onTap($event)"></Button>
+        <StackLayout class="hr-light m-t-15 m-b-15"></StackLayout>
+        <FlexboxLayout flexDirection=column>
+            <Button class="btn btn-outline btn-rounded-sm" text="About Me" (tap)="onTap($event)"></Button>
+            <Button class="btn btn-outline btn-rounded-sm" text="Flight Club in the Media" (tap)="onTap($event)"></Button>
         </FlexboxLayout>
     </FlexboxLayout>
 </ScrollView>

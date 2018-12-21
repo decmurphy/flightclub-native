@@ -2,6 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
+import { NativeScriptUISideDrawerModule } from 'nativescript-ui-sidedrawer/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,28 +22,36 @@ import {
 } from '@shared/services';
 
 import {
+  IfAndroidDirective,
+  IfIosDirective
+} from "@shared/directives";
+
+import {
   // ContactModule,
   HomeModule,
   // LiveModule, MediaModule,
   UserModule,
-  // MenuSidenavComponent, RunSimulationComponent, ErrorComponent,
+  MenuSidenavComponent,
+  // RunSimulationComponent, ErrorComponent,
   ToolbarComponent,
   // PhotographerSettingsDlgComponent, PatronsComponent
 } from '@components/index';
-import { MenuSidenavComponent } from './components/menu-sidenav/menu-sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
 
     ToolbarComponent,
+    MenuSidenavComponent,
 
-    MenuSidenavComponent
+    IfAndroidDirective,
+    IfIosDirective
   ],
   imports: [
     NativeScriptModule,
     NativeScriptFormsModule,
     NativeScriptHttpClientModule,
+    NativeScriptUISideDrawerModule,
 
     AppRoutingModule,
     SharedModule,

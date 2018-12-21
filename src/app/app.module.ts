@@ -39,7 +39,7 @@ import {
     AppComponent,
 
     MenuSidenavComponent,
-    ToolbarComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,

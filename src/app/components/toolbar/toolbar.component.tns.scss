@@ -1,1 +1,11 @@
-/* Add mobile styles for the component here.  */
+Image {
+    &.logo {
+        // vertical-align: middle;
+        height: 48;
+    }
+    &.patreonImage {
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+    }
+}

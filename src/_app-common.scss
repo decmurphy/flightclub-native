@@ -1,2 +1,11 @@
 @import '~nativescript-theme-core/css/core.dark.css';
 @import "theme-mobile";
+.fa {
+    font-family: FontAwesome5FreeSolid, FontAwesome5FreeRegular, 'Font Awesome 5 Free', FontAwesome5BrandsRegular, 'Font Awesome 5 Brands';
+    font-weight: normal;
+}
+
+.mdi {
+    font-family: Material Icons, 'Material Icons';
+    font-weight: normal;
+}
