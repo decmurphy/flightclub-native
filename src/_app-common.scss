@@ -1,7 +1,12 @@
 @import '~nativescript-theme-core/css/core.dark.css';
 @import "theme-mobile";
 .fa {
-    font-family: FontAwesome5FreeSolid, FontAwesome5FreeRegular, 'Font Awesome 5 Free', FontAwesome5BrandsRegular, 'Font Awesome 5 Brands';
+    font-family: FontAwesome5FreeSolid, FontAwesome5FreeRegular, 'Font Awesome 5 Free';
+    font-weight: normal;
+}
+
+.fa-brand {
+    font-family: 'Font Awesome 5 Brands', FontAwesome5BrandsRegular;
     font-weight: normal;
 }
 

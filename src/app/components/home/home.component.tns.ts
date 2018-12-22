@@ -3,6 +3,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { isAndroid, isIOS } from 'platform';
 
+import {
+  SidenavService
+} from '@shared/services';
+
 @Component({
   selector: 'fc-home',
   templateUrl: './home.component.html',
@@ -12,7 +16,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public sidenavService: SidenavService,
   ) { }
 
   ngOnInit() {
@@ -28,6 +33,10 @@ export class HomeComponent implements OnInit {
 
   isIOS(): boolean {
       return isIOS === true;
+  }
+
+  toggleDrawer(): void {
+    this.sidenavService.toggleNav('drawer');
   }
 
 }

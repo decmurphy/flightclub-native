@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MatSidenav, MatDrawerToggleResult } from '@angular/material';
+import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 
 @Injectable()
 export class SidenavService {
@@ -10,7 +11,7 @@ export class SidenavService {
     this.sidenavs = {};
   }
 
-  addSidenav(name: string, sidenav: MatSidenav): void {
+  addSidenav(name: string, sidenav: MatSidenav|RadSideDrawer): void {
     this.sidenavs[name] = {
       state: 'open',
       sidenav: sidenav
@@ -18,8 +19,14 @@ export class SidenavService {
   }
 
   toggleNav(name: string): void {
-    this.sidenavs[name].sidenav.toggle()
-      .then(state => this.sidenavs[name].state = state);
+    const target = this.sidenavs[name].sidenav;
+    if (target instanceof MatSidenav) {
+      target.toggle()
+            .then(state => this.sidenavs[name].state = state);
+    } else if (target instanceof RadSideDrawer) {
+      target.toggleDrawerState();
+      this.sidenavs[name].state = (target.getIsOpen() ? 'open' : 'closed');
+    }
   }
 
   isOpen(name: string): boolean {

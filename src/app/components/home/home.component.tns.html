@@ -1,6 +1,8 @@
 <ActionBar class='action-bar' title="test">
-    <NavigationButton *ngIf="isAndroid()" icon="res://baseline_menu_white_24"></NavigationButton>
-    <ActionItem *ngIf="isIOS()" icon="res://baseline_menu_white_24" ios.position="left"></ActionItem>
+    <NavigationButton *ngIf="isAndroid()" icon="res://baseline_menu_white_24" (tap)="toggleDrawer()"></NavigationButton>
+    <ActionItem *ngIf="isIOS()" ios.position="left" (tap)="toggleDrawer()">
+        <Label text="&#xf0c9;" class="fa"></Label>
+    </ActionItem>
     <StackLayout orientation="horizontal" ios:horizontalAlignment="center" android:horizontalAlignment="left">
         <Label text='Flight Club'></Label>
     </StackLayout>

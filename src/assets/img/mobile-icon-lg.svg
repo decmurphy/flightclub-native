@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="520.16833mm"
+   height="202.36971mm"
+   viewBox="0 0 1843.1162 717.05801"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="mobile-icon-lg.svg"
+   inkscape:export-filename="/Users/declan/Projects/fc/flightclub-native/src/assets/img/mobile-icon-lg.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.47852574"
+     inkscape:cx="679.49449"
+     inkscape:cy="281.10509"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer4"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1680"
+     inkscape:window-height="1005"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="background"
+     transform="translate(1727.4006,57.553005)">
+    <path
+       transform="matrix(-0.9961914,0.08719342,-0.08719342,-0.9961914,0,0)"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ccac55;stroke-width:15.00026131;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 824.00818,-111.80784 A 917.52594,119.07111 0 0 1 -88.449951,-230.87714"
+       id="path4145"
+       inkscape:connector-curvature="0" />
+    <path
+       transform="matrix(0.9961914,-0.08719342,-0.08719342,-0.9961914,0,0)"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ccac55;stroke-width:15;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -1349.6189,-132.55223 a 917.51929,119.06459 0 0 1 -396.9832,-98.04858"
+       id="path4148"
+       inkscape:connector-curvature="0" />
+    <path
+       transform="matrix(0.1110334,0.21444579,-0.24587108,0.14654766,-680.42409,345.79112)"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ccac55;stroke-width:15;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:transform-center-x="1.4865084"
+       inkscape:transform-center-y="1.9701909"
+       d="m -842.70701,147.14746 -40.74262,0.0131 20.36,-35.29067 z"
+       id="path4153"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:3.26871419;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+       id="path4154"
+       sodipodi:type="arc"
+       sodipodi:cx="-1086.5564"
+       sodipodi:cy="-300.97601"
+       sodipodi:rx="360.34775"
+       sodipodi:ry="356.89465"
+       sodipodi:start="3.1416101"
+       sodipodi:end="3.1397377"
+       d="m -1446.9041,-300.98224 a 360.34775,356.89465 0 0 1 360.1853,-356.88839 360.34775,356.89465 0 0 1 360.51,356.56672 360.34775,356.89465 0 0 1 -359.8478,357.222207 360.34775,356.89465 0 0 1 -360.8469,-356.232287"
+       sodipodi:open="true"
+       transform="scale(1,-1)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:145.62716675px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-1294.8832"
+       y="416.32224"
+       id="text4161"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4163"
+         x="-1294.8832"
+         y="416.32224">CLUB</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="body layer"
+     transform="translate(1727.4006,57.553005)">
+    <path
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -1165.5714,1.7678018 a 308.57144,308.57144 0 0 0 -223.562,374.7699782 308.57144,308.57144 0 0 0 374.7681,223.56243 308.57144,308.57144 0 0 0 173.5432,-117.57412 277.36728,277.36728 0 0 1 -132.12412,77.03213 277.36728,277.36728 0 0 1 -336.87098,-200.95544 277.36728,277.36728 0 0 1 200.9555,-336.870933 277.36728,277.36728 0 0 1 175.56058,13.641928 308.57144,308.57144 0 0 0 -232.27028,-33.6059732 z"
+       id="path4140"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="foreground"
+     transform="translate(1727.4006,57.553005)">
+    <g
+       aria-label="FLIGHT CLUB"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="text4205"
+       transform="matrix(0.89322563,0,0,0.89322563,-137.71025,3.938056)">
+      <path
+         d="m -1283.9758,216.00212 67.8319,0 0,13.43988 -51.8621,0 0,34.78557 46.8024,0 0,13.43988 -46.8024,0 0,56.36844 -15.9698,0 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:161.911026px;line-height:125%;font-family:'Brandon Grotesque';-inkscape-font-specification:'Brandon Grotesque, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#cccccc;fill-opacity:1"
+         id="path3733"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -1190.6872,216.00212 15.9697,0 0,104.59389 57.4753,0 0,13.43988 -73.445,0 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:161.911026px;line-height:125%;font-family:'Brandon Grotesque';-inkscape-font-specification:'Brandon Grotesque, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#cccccc;fill-opacity:1"
+         id="path3735"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -1100.5609,216.00212 15.9697,0 0,118.03377 -15.9697,0 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:161.911026px;line-height:125%;font-family:'Brandon Grotesque';-inkscape-font-specification:'Brandon Grotesque, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#cccccc;fill-opacity:1"
+         id="path3737"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -972.32867,317.19651 0,-31.70231 -26.08918,0 0,-13.12364 41.9008,0 0,50.67625 q -9.2498,6.56182 -20.39699,9.96132 -11.1472,3.32044 -23.79646,3.32044 -27.6704,0 -43.3239,-16.12785 -15.5744,-16.20692 -15.5744,-45.06313 0,-28.93527 15.5744,-45.06313 15.6535,-16.20691 43.3239,-16.20691 11.54245,0 21.89906,2.84609 10.43568,2.84609 19.21113,8.38016 l 0,16.9975 q -8.85451,-7.51052 -18.81583,-11.30531 -9.96133,-3.79479 -20.95041,-3.79479 -21.66195,0 -32.57195,12.09589 -10.831,12.09589 -10.831,36.0505 0,23.87555 10.831,35.97144 10.91,12.0959 32.57195,12.0959 8.45922,0 15.1001,-1.42305 6.64089,-1.5021 11.93778,-4.58537 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:161.911026px;line-height:125%;font-family:'Brandon Grotesque';-inkscape-font-specification:'Brandon Grotesque, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#cccccc;fill-opacity:1"
+         id="path3739"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -927.26554,216.00212 15.96974,0 0,48.38357 58.02866,0 0,-48.38357 15.96974,0 0,118.03377 -15.96974,0 0,-56.21032 -58.02866,0 0,56.21032 -15.96974,0 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:161.911026px;line-height:125%;font-family:'Brandon Grotesque';-inkscape-font-specification:'Brandon Grotesque, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#cccccc;fill-opacity:1"
+         id="path3741"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -821.88109,216.00212 99.85041,0 0,13.43988 -41.90081,0 0,104.59389 -16.04879,0 0,-104.59389 -41.90081,0 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:161.911026px;line-height:125%;font-family:'Brandon Grotesque';-inkscape-font-specification:'Brandon Grotesque, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#cccccc;fill-opacity:1"
+         id="path3743"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       aria-label=" "
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Brandon Grotesque';-inkscape-font-specification:'Brandon Grotesque, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="text4209" />
+    <path
+       transform="matrix(0.9961914,-0.08719342,0.08719342,0.9961914,0,0)"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ccac55;stroke-width:15.00000095;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 88.450317,230.29639 a 917.52594,119.07092 0 0 1 -458.762977,103.11844 917.52594,119.07092 0 0 1 -917.52594,0 917.52594,119.07092 0 0 1 -458.763,-103.11845"
+       id="path4174"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
