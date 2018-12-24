@@ -27,7 +27,7 @@ import {
 } from '@shared/directives';
 
 import {
-  // ContactModule,
+  AboutModule,
   HomeModule,
   LiveModule,
   MediaModule,
@@ -59,6 +59,7 @@ import {
     AppRoutingModule,
     SharedModule,
 
+    AboutModule,
     HomeModule,
     LiveModule,
     MediaModule,

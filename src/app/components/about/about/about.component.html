@@ -1,0 +1,80 @@
+<div style="min-height:100%">
+
+    <mat-sidenav-container fxFlex>
+
+        <mat-sidenav #contactForm position=end mode=over opened=false fxLayout=column fxLayoutGap=10px>
+            <!--<fc-contact-form></fc-contact-form>-->
+        </mat-sidenav>
+
+        <mat-sidenav-content class=container fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="24px">
+            <div fxLayout="row" fxLayoutAlign=center>
+                <div fxLayout="column" fxFlex.gt-sm=50>
+                    <div class="mat-subheading-2">
+                        <img align="right" src='/assets/img/profile_pic_1.png'>
+                        <p>Hi!</p>
+                        <p>I'm Declan Murphy, and I'm the creator of Flight Club. Hope you like it :)</p>
+                        <p>
+                            I have a favor to ask you! I'm a self-taught software engineer from Dublin, Ireland, and I'm looking for remote work.
+                        </p>
+                        <p>
+                            I have degrees in Theoretical Physics and High Performance Computing (no, I don't like The Big Bang Theory) and I have an extremely broad skillset. You can read more <a href="http://www.declanmurpy.xyz/DeclanMurphy_CurriculumVitae.pdf">here</a>.
+                        </p>
+                        <p>
+                            So: if you are hiring remote software engineers or know anyone who is, please <a href="mailto:declan.murphy@flightclub.io">get in touch</a> or send them here.
+                        </p>
+                        <p>
+                            And if you can't help me find a remote job, please support <a href="https://www.patreon.com/flightclub">FlightClub on Patreon</a> -- I do it all in my spare time!
+                        </p>
+                        <p>
+                            Go raibh maith agat! (<em>Thank you, in Irish!</em>)
+                        </p>
+                        <p>
+                            Declan
+                        </p>
+                    </div>
+                    <div fxLayout='row' fxLayoutAlign='center center' fxLayoutGap="15px">
+                        <button fxFlex mat-raised-button aria-label="Redirect Resume" color=primary matTooltip="Resume" matTooltipPosition="below" href="http://www.declanmurpy.xyz/DeclanMurphy_CurriculumVitae.pdf" target="_blank">
+                            Get Me Hired!
+                        </button>
+                        <button fxFlex mat-raised-button aria-label="Redirect Patreon" color=accent matTooltip="Patreon" matTooltipPosition="below" href="https://www.patreon.com/flightclub" target="_blank">
+                            Support Me
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div fxLayout='row' fxLayout.xs=column fxLayoutGap="15px">
+                <div fxLayout='row' fxLayoutAlign='center center' fxLayoutGap="15px">
+                    <button mat-fab aria-label="Redirect GitHub" (click)="navigateTo('https://github.com/decmurphy', '_blank')" matTooltip="GitHub" matTooltipPosition="above">
+                    <mat-icon>
+                        <fc-github></fc-github>
+                    </mat-icon>
+                </button>
+                    <button mat-fab aria-label="Redirect LinkedIn" (click)="navigateTo('https://ie.linkedin.com/in/declan-murphy-b9245787', '_blank')" matTooltip="LinkedIn" matTooltipPosition="above">
+                    <mat-icon>
+                        <fc-linkedin></fc-linkedin>
+                    </mat-icon>
+                </button>
+                    <button mat-fab aria-label="Redirect Twitter" (click)="navigateTo('https://twitter.com/flightclubio', '_blank')" matTooltip="Twitter" matTooltipPosition="above">
+                    <mat-icon>
+                        <fc-twitter></fc-twitter>
+                    </mat-icon>
+                </button>
+                    <button mat-fab aria-label="Redirect Patreon" (click)="navigateTo('https://www.patreon.com/flightclub', '_blank')" matTooltip="Patreon" matTooltipPosition="above">
+                    <mat-icon>
+                        <fc-patreon></fc-patreon>
+                    </mat-icon>
+                </button>
+                </div>
+                <div fxLayout='row' fxLayoutAlign='center center' fxLayoutGap="15px">
+                    <button mat-fab aria-label="Open Contact Form" color=primary (click)="toggleNav('contactForm')" matTooltip="Contact" matTooltipPosition="above">
+                    <mat-icon>email</mat-icon>
+                </button>
+                </div>
+            </div>
+
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+
+</div>

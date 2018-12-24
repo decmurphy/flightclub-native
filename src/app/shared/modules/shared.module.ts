@@ -11,7 +11,7 @@ import {
 } from '@components/cesium';
 
 import {
-  PatreonComponent, // GithubComponent, LinkedinComponent, TwitterComponent,
+  PatreonComponent, GithubComponent, LinkedinComponent, TwitterComponent,
 } from '@components/icons';
 
 import {
@@ -33,11 +33,11 @@ import {
 
     CesiumComponent,
     LoadScreenComponent,
-/*
+
     GithubComponent,
     LinkedinComponent,
-    */PatreonComponent
-    // TwitterComponent
+    PatreonComponent,
+    TwitterComponent
   ],
   providers: [
     LoadScreenService,
@@ -50,11 +50,11 @@ import {
 
     CesiumComponent,
     LoadScreenComponent,
-/*
+
     GithubComponent,
     LinkedinComponent,
-    */PatreonComponent
-    // TwitterComponent
+    PatreonComponent,
+    TwitterComponent
   ],
 })
 export class SharedModule { }

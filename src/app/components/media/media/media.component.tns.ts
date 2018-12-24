@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Page } from 'tns-core-modules/ui/page';
 
 @Component({
   selector: 'fc-media',
@@ -10,9 +11,12 @@ export class MediaComponent implements OnInit {
   tiles: Tile[];
 
   constructor(
+      private page: Page
   ) { }
 
   ngOnInit() {
+
+    this.page.actionBarHidden = true;
 
     this.tiles = [
         { name: '\'321 Launch\' from USA Today',

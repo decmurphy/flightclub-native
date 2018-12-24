@@ -1,6 +1,6 @@
+export * from './about';
 // export * from './build';
 export * from './cesium';
-// export * from './contact';
 // export * from './error';
 export * from './home';
 export * from './icons';

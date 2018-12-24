@@ -24,7 +24,7 @@ import {
 } from '@shared/services';
 
 import {
-  // ContactModule,
+  AboutModule,
   HomeModule,
   LiveModule,
   MediaModule,
@@ -54,6 +54,7 @@ import {
     AppRoutingModule,
     SharedModule,
 
+    AboutModule,
     HomeModule,
     LiveModule,
     MediaModule,
