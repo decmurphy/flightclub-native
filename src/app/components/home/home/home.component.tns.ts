@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Page } from 'tns-core-modules/ui/page';
 
 import { isAndroid, isIOS } from 'platform';
 
@@ -15,12 +16,14 @@ import {
 export class HomeComponent implements OnInit {
 
   constructor(
+    private page: Page,
     private router: Router,
     private route: ActivatedRoute,
     public sidenavService: SidenavService,
   ) { }
 
   ngOnInit() {
+    this.page.actionBarHidden = true;
   }
 
   routeTo(target: string): void {
