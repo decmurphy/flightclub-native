@@ -1,3 +1,15 @@
-<StackLayout class=container>
-    <Button text="media works!" class="btn btn-primary"></Button>
+<StackLayout class='container page p-5'>
+    <GridLayout rows="*">
+        <RadListView [items]="tiles">
+            <ng-template let-item="item">
+                <GridLayout rows="*, auto, auto" (tap)="externalRedirect(item.url)" style="background-color:#424242">
+                    <AbsoluteLayout class="m-15" row="0">
+                        <Image class="thumbnail" [src]="'~' + item.thumbnail"></Image>
+                    </AbsoluteLayout>
+                    <Label row="1" class="m-l-25" [text]="item.name"></Label>
+                    <StackLayout row="2" class="hr-light m-15"></StackLayout>
+                </GridLayout>
+            </ng-template>
+        </RadListView>
+    </GridLayout>
 </StackLayout>

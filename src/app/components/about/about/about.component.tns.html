@@ -1,14 +1,37 @@
-<ScrollView class=container orientation="vertical">
-    <FlexboxLayout class='page p-5' flexDirection=column>
+<ScrollView class='page container' orientation="vertical">
+    <StackLayout class='p-5' orientation="vertical">
+        <Label text="Hi!"></Label>
+        <Label text="I'm Declan Murphy, and I'm the creator of Flight Club. Hope you like it :)"></Label>
         <Image src="~/assets/img/profile_pic_1.png"></Image>
-        <FlexboxLayout flexDirection=column>
-            <Button class="btn btn-primary btn-rounded-sm" text="Create Simulations" nsRouterLink='/build'></Button>
-            <Button class="btn btn-primary btn-rounded-sm" text="Watch a Simulation Live!" nsRouterLink='/live'></Button>
-        </FlexboxLayout>
-        <StackLayout class="hr-light m-t-15 m-b-15"></StackLayout>
-        <FlexboxLayout flexDirection=column>
-            <Button class="btn btn-outline btn-rounded-sm" text="About Me" nsRouterLink='/about'></Button>
-            <Button class="btn btn-outline btn-rounded-sm" text="Flight Club in the Media" nsRouterLink='/media'></Button>
-        </FlexboxLayout>
-    </FlexboxLayout>
+        <Label text="I have a favor to ask you! I'm a self-taught software engineer from Dublin, Ireland, and I'm looking for remote work."></Label>
+        <Label>
+            <FormattedString>
+                <Span text="I have degrees in Theoretical Physics and High Performance Computing (no, I don't like The Big Bang Theory) and I have an extremely broad skillset. You can read more"></Span>
+                <Span text=" here " (tap)="externalRedirect('http://www.declanmurpy.xyz/DeclanMurphy_CurriculumVitae.pdf')" color="#ccac55"></Span>
+                <Span text="."></Span>
+            </FormattedString>
+        </Label>
+        <Label>
+            <FormattedString>
+                <Span text="So: if you are hiring remote software engineers or know anyone who is, please"></Span>
+                <Span text=" get in touch " (tap)="externalRedirect('mailto:declan.murphy@flightclub.io')" color="#ccac55"></Span>
+                <Span text="or send them here."></Span>
+            </FormattedString>
+        </Label>
+        <Label>
+            <FormattedString>
+                <Span text="And if you can't help me find a remote job, please support"></Span>
+                <Span text=" FlightClub on Patreon " (tap)="externalRedirect('https://www.patreon.com/flightclub')" color="#ccac55"></Span>
+                <Span text=" -- I do it all in my spare time!"></Span>
+            </FormattedString>
+        </Label>
+        <Label>
+            <FormattedString>
+                <Span text="Go raibh maith agat! ("></Span>
+                <Span text="Thank you, in Irish!" fontStyle="italic"></Span>
+                <Span text=")"></Span>
+            </FormattedString>
+        </Label>
+        <Label text="Declan"></Label>
+    </StackLayout>
 </ScrollView>

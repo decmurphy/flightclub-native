@@ -1,14 +1,16 @@
-<ScrollView class=container orientation="vertical">
-    <FlexboxLayout class='page p-5' flexDirection=column>
-        <Image src="~/assets/img/logo-lg.png"></Image>
-        <FlexboxLayout flexDirection=column>
-            <Button class="btn btn-primary btn-rounded-sm" text="Create Simulations" nsRouterLink='/build'></Button>
-            <Button class="btn btn-primary btn-rounded-sm" text="Watch a Simulation Live!" nsRouterLink='/live'></Button>
-        </FlexboxLayout>
-        <StackLayout class="hr-light m-t-15 m-b-15"></StackLayout>
-        <FlexboxLayout flexDirection=column>
-            <Button class="btn btn-outline btn-rounded-sm" text="About Me" nsRouterLink='/about'></Button>
-            <Button class="btn btn-outline btn-rounded-sm" text="Flight Club in the Media" nsRouterLink='/media'></Button>
-        </FlexboxLayout>
+<ScrollView class='container page p-5'>
+    <FlexboxLayout flexDirection=column justifyContent='space-around'>
+        <Image class="m-25" src="~/assets/img/logo-lg.png"></Image>
+        <StackLayout>
+            <FlexboxLayout flexDirection=column>
+                <Button class="btn btn-primary btn-rounded-sm" text="Create Simulations" nsRouterLink='/build'></Button>
+                <Button class="btn btn-primary btn-rounded-sm" text="Watch a Simulation Live!" nsRouterLink='/live'></Button>
+            </FlexboxLayout>
+            <StackLayout class="hr-light m-t-15 m-b-15"></StackLayout>
+            <FlexboxLayout flexDirection=column>
+                <Button class="btn btn-outline btn-rounded-sm" text="About Me" nsRouterLink='/about'></Button>
+                <Button class="btn btn-outline btn-rounded-sm" text="Flight Club in the Media" nsRouterLink='/media'></Button>
+            </FlexboxLayout>
+        </StackLayout>
     </FlexboxLayout>
 </ScrollView>
