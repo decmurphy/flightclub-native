@@ -1,0 +1,24 @@
+<div fxFlex fxLayout=column fxLayoutGap=10px>
+    <mat-divider></mat-divider>
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <p class="mat-headline">{{simulation.mission.description}}</p>
+        <p class="mat-title">{{clock}}</p>
+    </div>
+    <mat-divider></mat-divider>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around start">
+        <button mat-raised-button *ngFor="let id of getStageIds(); let i = index;" [ngClass]="{'selected-stage' : i === cesiumService.getTrackedStage()}" (click)="clickStage(i)">
+            {{stageNames[i]}}
+        </button>
+    </div>
+    <mat-divider></mat-divider>
+    <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
+        <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+            <span class="mat-subheading-2">{{stageNames[cesiumService.getTrackedStage()]}} Altitude: {{altitudeString}}</span>
+            <canvas id="altitude_plot"></canvas>
+        </div>
+        <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+            <span class="mat-subheading-2">{{stageNames[cesiumService.getTrackedStage()]}} Velocity: {{velocityString}}</span>
+            <canvas id="velocity_plot"></canvas>
+        </div>
+    </div>
+</div>

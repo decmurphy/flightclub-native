@@ -1,0 +1,21 @@
+<div fxFlexFill>
+    <button id="cesiumMenu" mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="openPadViewPointEditDialog()" [disabled]="!userService.isMEOPatron()" [matTooltip]="!userService.isGTOPatron() ? 'You must be at least a GTO Patron to use these tools!' : ''" matTooltipPosition="right">
+            <mat-icon>camera_enhance</mat-icon>
+            <span>Photographer Tools</span>
+        </button>
+        <button mat-menu-item *ngIf="page === 'result'" (click)="setViewOffset()">
+            <mat-icon>language</mat-icon>
+            <span>Change Reference Frame</span>
+        </button>
+        <button mat-menu-item *ngIf="page === 'live'" (click)="toggleNav('liveSidenav')">
+            <mat-icon>timeline</mat-icon>
+            <span>Telemetry</span>
+        </button>
+    </mat-menu>
+    <div #cesiumContainer [ngStyle]="{ width: containerWidth ? containerWidth : '100%', height: containerHeight ? containerHeight : '100%' }">
+    </div>
+</div>

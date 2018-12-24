@@ -1,0 +1,40 @@
+<h2 mat-dialog-title>Photographer Settings</h2>
+<mat-dialog-content>
+    <div>
+        <p>
+            This will change the coordinates of the camera to show how the launch might look from certain ground locations. Elevation is automatically calculated from latitude+longitude values provided here!
+        </p>
+        <p>
+            This launch is taking place from {{data.site.description}}. Coordinates of launch site are {{data.site.latitude}}°N, {{data.site.longitude}}°E
+        </p>
+    </div>
+    <mat-card>
+        <form [formGroup]="form">
+            <div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap=20px formGroupName="origin">
+                <mat-form-field fxFlex>
+                    <input matInput placeholder="Latitude (°)" type="number" formControlName="latitude">
+                </mat-form-field>
+                <mat-form-field fxFlex>
+                    <input matInput placeholder="Longitude (°)" type="number" formControlName="longitude">
+                </mat-form-field>
+                <mat-form-field fxFlex>
+                    <input matInput placeholder="Elevation (m)" type="number" formControlName="elevation">
+                </mat-form-field>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap=20px>
+                <mat-form-field fxFlex>
+                    <input matInput placeholder="Field of View (°)" type="number" formControlName="fieldOfView">
+                </mat-form-field>
+                <mat-form-field fxFlex>
+                    <input matInput placeholder="Aspect Ratio (width/height)" type="number" formControlName="aspectRatio">
+                </mat-form-field>
+                <span fxFlex>
+                </span>
+            </div>
+        </form>
+    </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions fxLayoutAlign=end>
+    <button mat-raised-button (click)="cancel()">Cancel</button>
+    <button mat-raised-button [disabled]="formInvalid()" (click)="save()">Save</button>
+</mat-dialog-actions>

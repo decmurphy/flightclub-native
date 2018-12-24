@@ -1,0 +1,64 @@
+<div fxFlexFill>
+
+    <fc-load-screen *ngIf="isLiveLoading" fxFlexFill fxLayout="column" fxLayoutAlign="center center" page="live" header="Fetching next mission..."></fc-load-screen>
+
+    <div [hidden]="isLiveLoading" fxFlexFill>
+
+        <div *ngIf="!isShowCesium" fxFlexFill>
+
+            <div id="countdown" [hidden]="!isShowCountdown" fxFlexFill fxLayout="column">
+                <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
+                    <div></div>
+                    <span fxLayout="row" fxLayoutAlign="center" class="mat-display-4">{{getMissionName()}}</span>
+                    <span fxLayout="row" fxLayoutAlign="center" class="mat-display-2">will launch in</span>
+                    <span fxLayout="row" fxLayoutAlign="center start">
+                        <span fxFlex fxLayout="row" fxLayoutAlign="end start">
+                            <pre class="mat-display-4">{{countdown.days}} {{countdown.days === 1 ? 'day ' : 'days'}} </pre>
+                        </span>
+                    <span>
+                            <pre class="mat-display-4">{{countdown.hours}}</pre>
+                        </span>
+                    <span fxFlex fxLayout="row" fxLayoutAlign="start start">
+                            <pre class="mat-display-4">:{{countdown.minutes}}:{{countdown.seconds}}</pre>
+                        </span>
+                    </span>
+                    <div></div>
+                </div>
+                <span fxLayout="row" fxLayoutAlign="center">Countdown to {{simulation?.mission.datetime}}</span>
+            </div>
+
+            <div fxFlexFill *ngIf="isLaunchFinished" fxLayout="column" fxLayoutAlign="center center">
+                <h3>{{getMissionName()}} has already launched</h3>
+                <mat-divider></mat-divider>
+                <a [routerLink]="['/live']" [queryParams]="{'w': 2, 'code': simulation.mission.code}">Rewatch the launch here</a>
+            </div>
+
+        </div>
+        <div fxFlexFill *ngIf="isShowCesium" fxFlex fxLayout="row">
+
+            <mat-sidenav-container fxFlexFill>
+                <mat-sidenav-content>
+                    <fc-cesium fxFlexFill fxFlex [simulation]="simulation" page="live"></fc-cesium>
+                </mat-sidenav-content>
+                <mat-sidenav #liveSidenav position=end [(mode)]='mode' [(opened)]='opened' fxLayout=column fxLayoutGap=10px>
+                    <fc-live-sidenav fxFlexFill></fc-live-sidenav>
+                </mat-sidenav>
+            </mat-sidenav-container>
+
+        </div>
+    </div>
+
+</div>
+<!--
+<div style="visibility: hidden">
+    <div class="mat-dialog-container" id="myDialog">
+        <mat-dialog aria-label="Cesium Credits Dialog" style="min-height:20%">
+            <mat-dialog-content fxFlexFill>
+                <div class="mat-dialog-content" fxFlexFill>
+                    <div id="creditContainer"></div>
+                </div>
+            </mat-dialog-content>
+        </mat-dialog>
+    </div>
+</div>
+-->

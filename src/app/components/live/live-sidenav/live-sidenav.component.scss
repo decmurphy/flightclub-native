@@ -1,0 +1,8 @@
+button {
+    &.selected-stage {
+        background-color: #ccac55 !important;
+    }
+    &:hover:not(.selected-stage) {
+        background-color: rgb(220, 220, 220) !important;
+    }
+}

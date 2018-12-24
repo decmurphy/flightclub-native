@@ -1,0 +1,12 @@
+<div fxFlex class=container>
+    <mat-grid-list [cols]="numCols | async" mat-row-height="1:1" gutterSize="8px">
+        <mat-grid-tile *ngFor="let tile of tiles" rowspan="1" colspan="2">
+            <a mat-raised-button fxFlexFill (click)="goExternal(tile.url)" fxLayoutAlign="center center">
+                <img src="{{tile.thumbnail}}" alt="{{tile.name}}" />
+                <mat-grid-tile-footer>
+                    <h3>{{tile.name}}</h3>
+                </mat-grid-tile-footer>
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
