@@ -5,23 +5,22 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from './material.module';
 import { CdkModule } from './cdk.module';
-/*
+
 import {
   CesiumComponent
 } from '@components/cesium';
-*/
+
 import {
-  PatreonComponent
-  // GithubComponent, LinkedinComponent, TwitterComponent,
+  PatreonComponent, // GithubComponent, LinkedinComponent, TwitterComponent,
 } from '@components/icons';
-/*
-import {
-  LiveSidenavComponent
-} from '@components/live/live-sidenav/live-sidenav.component';
-*/
+
 import {
   LoadScreenComponent, LoadScreenService
 } from '@components/load-screen';
+
+import {
+  TrajectoryInfoService
+} from '@shared/services';
 
 @NgModule({
   imports: [
@@ -31,10 +30,9 @@ import {
     CdkModule
   ],
   declarations: [
-    /*
+
     CesiumComponent,
-    LiveSidenavComponent,
-    */LoadScreenComponent,
+    LoadScreenComponent,
 /*
     GithubComponent,
     LinkedinComponent,
@@ -42,17 +40,15 @@ import {
     // TwitterComponent
   ],
   providers: [
-    LoadScreenService
+    LoadScreenService,
+    TrajectoryInfoService
   ],
   exports: [
     FlexLayoutModule,
     MaterialModule,
     CdkModule,
-/*
-    CesiumComponent,
 
-    LiveSidenavComponent,
-*/
+    CesiumComponent,
     LoadScreenComponent,
 /*
     GithubComponent,

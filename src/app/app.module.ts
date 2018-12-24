@@ -26,12 +26,14 @@ import {
 import {
   // ContactModule,
   HomeModule,
-  // LiveModule, MediaModule,
+  LiveModule,
+  MediaModule,
   UserModule,
   MenuSidenavComponent,
   // RunSimulationComponent, ErrorComponent,
-  ToolbarComponent
-  // PhotographerSettingsDlgComponent, PatronsComponent
+  ToolbarComponent,
+  PhotographerSettingsDlgComponent,
+  // PatronsComponent
 } from '@components/index';
 
 @NgModule({
@@ -39,7 +41,8 @@ import {
     AppComponent,
 
     MenuSidenavComponent,
-    ToolbarComponent
+    PhotographerSettingsDlgComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,9 @@ import {
     SharedModule,
 
     HomeModule,
-    UserModule
+    LiveModule,
+    MediaModule,
+    UserModule,
   ],
   providers: [
     CoreService,

@@ -1,7 +1,7 @@
-<ActionBar class='action-bar' title="test">
-    <ActionItem ios.position="left" android.position="left">
-        <Label text="&#xe5d2;" class="fa mdi"></Label>
-        <!-- e5d2 f0c9 -->
+<ActionBar class='action-bar'>
+    <NavigationButton *ngIf="isAndroid()" icon="res://baseline_menu_white_24" (tap)="toggleDrawer()"></NavigationButton>
+    <ActionItem *ngIf="isIOS()" ios.position="left" (tap)="toggleDrawer()">
+        <Label text="&#xf0c9;" class="fa"></Label>
     </ActionItem>
     <StackLayout orientation="horizontal" ios:horizontalAlignment="center" android:horizontalAlignment="left">
         <Label text='Flight Club'></Label>

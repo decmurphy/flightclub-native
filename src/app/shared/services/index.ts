@@ -1,11 +1,11 @@
 export * from './auth.interceptor';
 export * from './core.service';
-// export * from './chart-js.service';
+export * from './chart-js.service';
 export * from './local-storage.service';
 // export * from './mail.service';
 export * from './patreon.service';
 // export * from './plotly.service';
 // export * from './session-storage.service';
 export * from './sidenav.service';
-// export * from './trajectory-info.service';
+export * from './trajectory-info.service';
 export * from './utility.service';

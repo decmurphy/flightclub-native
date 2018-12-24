@@ -1,5 +1,6 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { RadSideDrawerComponent } from 'nativescript-ui-sidedrawer/angular';
+import * as utilsModule from 'tns-core-modules/utils/utils';
 
 import {
   UserService
@@ -31,6 +32,11 @@ export class MenuSidenavComponent implements OnInit {
 
   hasRole(role: string): boolean {
     return this.userService.hasRole(role);
+  }
+
+  externalRedirect(url: string) {
+    this.sidenavService.toggleNav('drawer');
+    utilsModule.openUrl(url);
   }
 
 }

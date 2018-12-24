@@ -24,28 +24,31 @@ import {
 import {
   IfAndroidDirective,
   IfIosDirective
-} from "@shared/directives";
+} from '@shared/directives';
 
 import {
   // ContactModule,
   HomeModule,
-  // LiveModule, MediaModule,
+  LiveModule,
+  MediaModule,
   UserModule,
   MenuSidenavComponent,
   // RunSimulationComponent, ErrorComponent,
   ToolbarComponent,
-  // PhotographerSettingsDlgComponent, PatronsComponent
+  PhotographerSettingsDlgComponent,
+  // PatronsComponent
 } from '@components/index';
 
 @NgModule({
   declarations: [
     AppComponent,
 
-    ToolbarComponent,
     MenuSidenavComponent,
+    PhotographerSettingsDlgComponent,
+    ToolbarComponent,
 
     IfAndroidDirective,
-    IfIosDirective
+    IfIosDirective,
   ],
   imports: [
     NativeScriptModule,
@@ -57,6 +60,8 @@ import {
     SharedModule,
 
     HomeModule,
+    LiveModule,
+    MediaModule,
     UserModule
   ],
   providers: [

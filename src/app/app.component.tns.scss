@@ -1,0 +1,7 @@
+// this sets the content to exactly the viewport height minus the height of the toolbar
+fc-menu-sidenav {
+    min-height: 100%;
+    background-color: red;
+    // margin-top: -56;
+    // padding-top: 56;
+}

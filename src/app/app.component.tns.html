@@ -1,3 +1,10 @@
-<StackLayout>
-    <fc-menu-sidenav></fc-menu-sidenav>
-</StackLayout>
+<GridLayout rows="auto,*" style="background-color:green">
+    <StackLayout row="0">
+        <fc-toolbar></fc-toolbar>
+    </StackLayout>
+    <StackLayout row="1" style="background-color:red">
+        <fc-menu-sidenav>
+            <router-outlet></router-outlet>
+        </fc-menu-sidenav>
+    </StackLayout>
+</GridLayout>
