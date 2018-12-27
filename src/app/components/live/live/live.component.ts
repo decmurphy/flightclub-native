@@ -36,7 +36,7 @@ export class LiveComponent implements OnInit, OnDestroy {
   countdown: any;
   clockUpdateTimer: Subscription;
 
-  simulation: any;
+  simulation: Simulation;
 
   constructor(
     private route: ActivatedRoute,

@@ -1,3 +1,15 @@
-<StackLayout class=container>
-    <Button text="live works!" class="btn btn-primary"></Button>
+<StackLayout class='page container'>
+
+    <GridLayout rows="*" cols="*">
+        <FlexBoxLayout row=0 flexDirection=column justifyContent='space-between' alignItems='center'>
+            <StackLayout></StackLayout>
+            <StackLayout>
+                <Label class="h1 m-x-auto" [text]="getMissionName()"></Label>
+                <Label class="h3 m-x-auto" text="will launch in"></Label>
+            </StackLayout>
+            <Label class="h1" [text]="countdown.days + (countdown.days === 1 ? ' day ' : ' days ') + countdown.hours + ':' + countdown.minutes + ':' + countdown.seconds"></Label>
+            <Label class="h5" [text]="'Countdown to ' + simulation?.mission.datetime"></Label>
+        </FlexBoxLayout>
+    </GridLayout>
+
 </StackLayout>

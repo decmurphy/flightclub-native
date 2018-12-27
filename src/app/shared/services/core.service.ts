@@ -131,7 +131,7 @@ export class CoreService {
         return this.http.get(this.apiUrl + '/simulation/?id=' + id).toPromise();
     }
 
-    getLiveSimulationResults(code: string): Promise<any> {
+    getLiveSimulationResults(code?: string): Promise<any> {
         const ep = '/simulation/live' + (code ? '/?code=' + code : '');
         return this.http.get(this.apiUrl + ep).toPromise();
     }

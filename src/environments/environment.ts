@@ -6,13 +6,13 @@ export const environment = {
   production: false,
   client: {
       protocol: 'http',
-      host: 'localhost',
+      host: '10.0.2.2',
       port: '4200'
   },
   server: {
-      protocol: 'http',
-      host: 'localhost',
-      port: '8080'
+      protocol: 'https',
+      host: 'www.flightclub.io',
+      port: '8443'
   },
   baseUrl: '/',
   enableDebug: true,

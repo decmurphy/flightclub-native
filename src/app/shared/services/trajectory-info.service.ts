@@ -65,7 +65,7 @@ export class TrajectoryInfoService {
 
     }
 
-    getLiveMissionDetails(code: string): Promise<any> {
+    getLiveMissionDetails(code?: string): Promise<any> {
         return this.getDetailsCommon(this.coreService.getLiveSimulationResults(code));
     }
 
