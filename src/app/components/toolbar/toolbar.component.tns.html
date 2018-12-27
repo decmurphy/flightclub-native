@@ -1,12 +1,18 @@
 <ActionBar class='action-bar'>
     <NavigationButton *ngIf="isAndroid()" icon="res://baseline_menu_white_24" (tap)="toggleDrawer()"></NavigationButton>
+    <ActionItem *ngIf="isIOS()" ios.position="left" (tap)="onIosTap()">
+        <Label #actionItemIcon [text]="text" class="fa"></Label>
+    </ActionItem>
+    <StackLayout orientation="horizontal" ios:horizontalAlignment="center" android:horizontalAlignment="left">
+        <Label text='Flight Club'></Label>
+    </StackLayout>
+</ActionBar>
+<!--
     <ActionItem *ngIf="isIOS() && isRoot" ios.position="left" (tap)="toggleDrawer()">
         <Label text="&#xf0c9;" class="fa"></Label>
     </ActionItem>
     <ActionItem *ngIf="isIOS() && !isRoot" ios.position="left" (tap)="goBack()">
         <Label text="&#xf053;" class="fa"></Label>
     </ActionItem>
-    <StackLayout orientation="horizontal" ios:horizontalAlignment="center" android:horizontalAlignment="left">
-        <Label text='Flight Club'></Label>
-    </StackLayout>
-</ActionBar>
+    
+    -->

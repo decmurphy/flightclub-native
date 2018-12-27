@@ -16,52 +16,49 @@
             </GridLayout>
         </GridLayout>
 
-        <StackLayout>
+        <GridLayout columns="*" rows="auto">
+            <StackLayout orientation="horizontal" col="0" row="0" (tap)="sidenavService.toggleNav('drawer')" nsRouterLink='/'>
+                <Label text="&#xf015;" width="50" class="p-15 sidedrawer-list-item fa"></Label>
+                <Label text="Home" class="p-15 sidedrawer-list-item"></Label>
+            </StackLayout>
+        </GridLayout>
+        <GridLayout columns="*,50" rows="auto">
+            <StackLayout orientation="horizontal" col="0" row="0" (tap)="sidenavService.toggleNav('drawer')" nsRouterLink='/build'>
+                <Label text="&#xf0ad;" width="50" class="p-15 sidedrawer-list-item fa"></Label>
+                <Label text="Simulate" class="p-15 sidedrawer-list-item"></Label>
+            </StackLayout>
+            <StackLayout orientation="horizontal" col="1" row="0">
+                <Label text="&#xf107;" class="p-15 sidedrawer-list-item fa"></Label>
+            </StackLayout>
+        </GridLayout>
+        <GridLayout columns="*,50" rows="auto">
+            <StackLayout orientation="horizontal" col="0" row="0" (tap)="sidenavService.toggleNav('drawer')" nsRouterLink='/live'>
+                <Label text="&#xf108;" width="50" class="p-15 sidedrawer-list-item fa"></Label>
+                <Label text="Live" class="p-15 sidedrawer-list-item"></Label>
+            </StackLayout>
+            <StackLayout orientation="horizontal" col="1" row="0">
+                <Label text="&#xf107;" class="p-15 sidedrawer-list-item fa"></Label>
+            </StackLayout>
+        </GridLayout>
+        <GridLayout columns="*" rows="auto">
+            <StackLayout orientation="horizontal" col="0" row="0" (tap)="sidenavService.toggleNav('drawer')" nsRouterLink='/media'>
+                <Label text="&#xf245;" width="50" class="p-15 sidedrawer-list-item fa"></Label>
+                <Label text="Media" class="p-15 sidedrawer-list-item"></Label>
+            </StackLayout>
+        </GridLayout>
+        <GridLayout columns="*" rows="auto">
+            <StackLayout orientation="horizontal" col="0" row="0" (tap)="sidenavService.toggleNav('drawer')" nsRouterLink='/about'>
+                <Label text="&#xf598;" width="50" class="p-15 sidedrawer-list-item fa"></Label>
+                <Label text="About Declan" class="p-15 sidedrawer-list-item"></Label>
+            </StackLayout>
+        </GridLayout>
+        <GridLayout columns="*" rows="auto">
+            <StackLayout orientation="horizontal" col="0" row="0" (tap)="externalRedirect('https://www.patreon.com/flightclub')">
+                <Label text="&#xf3d9;" width="50" class="p-15 sidedrawer-list-item fa-brand"></Label>
+                <Label text="Support me on Patreon!" class="p-15 sidedrawer-list-item"></Label>
+            </StackLayout>
+        </GridLayout>
 
-            <GridLayout columns="*" rows="auto">
-                <StackLayout orientation="horizontal" col="0" row="0" (tap)="sidenavService.toggleNav('drawer')" nsRouterLink='/'>
-                    <Label text="&#xf015;" width="50" class="p-15 sidedrawer-list-item fa"></Label>
-                    <Label text="Home" class="p-15 sidedrawer-list-item"></Label>
-                </StackLayout>
-            </GridLayout>
-            <GridLayout columns="*,50" rows="auto">
-                <StackLayout orientation="horizontal" col="0" row="0" (tap)="sidenavService.toggleNav('drawer')" nsRouterLink='/build'>
-                    <Label text="&#xf0ad;" width="50" class="p-15 sidedrawer-list-item fa"></Label>
-                    <Label text="Simulate" class="p-15 sidedrawer-list-item"></Label>
-                </StackLayout>
-                <StackLayout orientation="horizontal" col="1" row="0">
-                    <Label text="&#xf107;" class="p-15 sidedrawer-list-item fa"></Label>
-                </StackLayout>
-            </GridLayout>
-            <GridLayout columns="*,50" rows="auto">
-                <StackLayout orientation="horizontal" col="0" row="0" (tap)="sidenavService.toggleNav('drawer')" nsRouterLink='/live'>
-                    <Label text="&#xf108;" width="50" class="p-15 sidedrawer-list-item fa"></Label>
-                    <Label text="Live" class="p-15 sidedrawer-list-item"></Label>
-                </StackLayout>
-                <StackLayout orientation="horizontal" col="1" row="0">
-                    <Label text="&#xf107;" class="p-15 sidedrawer-list-item fa"></Label>
-                </StackLayout>
-            </GridLayout>
-            <GridLayout columns="*" rows="auto">
-                <StackLayout orientation="horizontal" col="0" row="0" (tap)="sidenavService.toggleNav('drawer')" nsRouterLink='/media'>
-                    <Label text="&#xf245;" width="50" class="p-15 sidedrawer-list-item fa"></Label>
-                    <Label text="Media" class="p-15 sidedrawer-list-item"></Label>
-                </StackLayout>
-            </GridLayout>
-            <GridLayout columns="*" rows="auto">
-                <StackLayout orientation="horizontal" col="0" row="0" (tap)="sidenavService.toggleNav('drawer')" nsRouterLink='/about'>
-                    <Label text="&#xf0ad;" width="50" class="p-15 sidedrawer-list-item fa"></Label>
-                    <Label text="About Declan" class="p-15 sidedrawer-list-item"></Label>
-                </StackLayout>
-            </GridLayout>
-            <GridLayout columns="*" rows="auto">
-                <StackLayout orientation="horizontal" col="0" row="0" (tap)="externalRedirect('https://www.patreon.com/flightclub')">
-                    <Label text="&#xf3d9;" width="50" class="p-15 sidedrawer-list-item fa-brand"></Label>
-                    <Label text="Support me on Patreon!" class="p-15 sidedrawer-list-item"></Label>
-                </StackLayout>
-            </GridLayout>
-
-        </StackLayout>
     </StackLayout>
 
     <StackLayout tkMainContent>

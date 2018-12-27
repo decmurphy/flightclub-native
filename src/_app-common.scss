@@ -1,5 +1,9 @@
 @import '~nativescript-theme-core/css/core.dark.css';
 @import "theme-mobile";
+[hidden] {
+    display: none !important;
+}
+
 .fa {
     font-family: 'Font Awesome 5 Free';
     font-weight: normal;
