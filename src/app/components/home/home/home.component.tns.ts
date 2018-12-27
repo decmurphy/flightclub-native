@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Page } from 'tns-core-modules/ui/page';
+import * as utilsModule from 'tns-core-modules/utils/utils';
 
 import { isAndroid, isIOS } from 'platform';
 
@@ -40,6 +41,10 @@ export class HomeComponent implements OnInit {
 
   toggleDrawer(): void {
     this.sidenavService.toggleNav('drawer');
+  }
+
+  externalRedirect(url: string) {
+    utilsModule.openUrl(url);
   }
 
 }

@@ -1,6 +1,10 @@
 <StackLayout class='page container'>
 
-    <GridLayout rows="*" cols="*">
+    <GridLayout *ngIf="isLiveLoading" rows="*" cols="*">
+        <fc-load-screen page="live" header="Fetching next mission..."></fc-load-screen>
+    </GridLayout>
+
+    <GridLayout [hidden]="isLiveLoading" rows="*" cols="*">
         <FlexBoxLayout row=0 flexDirection=column justifyContent='space-between' alignItems='center'>
             <StackLayout></StackLayout>
             <StackLayout>
