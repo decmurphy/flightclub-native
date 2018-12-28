@@ -1,0 +1,70 @@
+<div fxFlexFill>
+
+    <mat-sidenav-container fxFlexFill>
+
+        <mat-sidenav #resultSidenav [(mode)]='mode' [(opened)]='opened' fxLayout=column fxLayoutGap=10px>
+
+            <mat-divider></mat-divider>
+
+            <mat-list style="padding:0px">
+                <mat-list-item class="clickable_list" (click)="navigate(['result', '2d'], { queryParamsHandling: 'preserve' })">
+                    <mat-icon style="margin-right:32px">assessment</mat-icon>
+                    <span>2D Visualisation</span>
+                    <span fxFlex></span>
+                    <mat-icon [hidden]="!routeMatches('2d')">chevron_right</mat-icon>
+                </mat-list-item>
+                <mat-list-item class="clickable_list" (click)="navigate(['result', '3d'], { queryParamsHandling: 'preserve' })">
+                    <mat-icon style="margin-right:32px">public</mat-icon>
+                    <span>3D Visualisation</span>
+                    <span fxFlex></span>
+                    <mat-icon [hidden]="!routeMatches('3d')">chevron_right</mat-icon>
+                </mat-list-item>
+                <mat-list-item class="clickable_list" (click)="navigate(['result', 'telemetry'], { queryParamsHandling: 'preserve' })">
+                    <mat-icon style="margin-right:32px">table_chart</mat-icon>
+                    <span>Telemetry</span>
+                    <span fxFlex></span>
+                    <mat-icon [hidden]="!routeMatches('telemetry')">chevron_right</mat-icon>
+                </mat-list-item>
+            </mat-list>
+
+            <mat-divider></mat-divider>
+
+            <div *ngIf="user.hasRole('admin')" fxLayout="column" fxLayoutGap="4px" style="padding:1%">
+                <div fxLayout=row fxLayoutAlign="space-around">
+                    <button mat-raised-button color=accent [ngStyle]="{'background-color': overrideLiveStatus.color,'width':'90%'}" type="submit" (click)="overrideLive()">
+                        <span *ngIf="!overrideLiveStatus.in_progress && !overrideLiveStatus.show_success">Override Live Plot</span>
+                        <mat-spinner class="icon-style" *ngIf="overrideLiveStatus.in_progress" mode="indeterminate"></mat-spinner>
+                        <mat-icon *ngIf="!overrideLiveStatus.in_progress && overrideLiveStatus.show_success">{{overrideLiveStatus.icon}}</mat-icon>
+                    </button>
+                </div>
+            </div>
+
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+
+            <fc-load-screen fxFlexFill *ngIf="isResultLoading" fxLayout="column" fxLayoutAlign="center center" page="result" header="Building plots..."></fc-load-screen>
+
+            <ng-container *ngIf="!isResultLoading">
+                <ng-container *ngIf="isResultLoadSuccess">
+                    <router-outlet></router-outlet>
+                    <button mat-fab fxShow fxHide.gt-sm color=accent class="menu-button" (click)="toggleNav('resultSidenav')">
+                        <mat-icon>view_list</mat-icon>
+                    </button>
+                </ng-container>
+                <ng-container *ngIf="!isResultLoadSuccess" fxFlex fxFlexFill fxLayout="column" fxLayoutAlign="center center">
+                    <p>
+                        The flightclub.io server has undergone a rapid unscheduled disassembly :/<br> You'll need to wait until I wake up and see this...
+                    </p>
+                    <hr>
+                    <p>
+                        Check here to check the server status: <a href='/status'>Is Flight Club down?</a>
+                    </p>
+                </ng-container>
+            </ng-container>
+
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+
+</div>

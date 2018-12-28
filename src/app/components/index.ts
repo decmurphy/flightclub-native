@@ -9,7 +9,7 @@ export * from './live';
 export * from './media';
 export * from './menu-sidenav';
 // export * from './patrons';
-// export * from './result';
+export * from './result';
 // export * from './run-simulation';
 export * from './toolbar';
 export * from './user';

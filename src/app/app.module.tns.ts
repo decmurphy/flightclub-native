@@ -31,6 +31,7 @@ import {
   HomeModule,
   LiveModule,
   MediaModule,
+  ResultModule,
   UserModule,
   MenuSidenavComponent,
   // RunSimulationComponent, ErrorComponent,
@@ -63,6 +64,7 @@ import {
     HomeModule,
     LiveModule,
     MediaModule,
+    ResultModule,
     UserModule
   ],
   providers: [

@@ -43,6 +43,7 @@
     "nativescript-theme-core": "^1.0.4",
     "nativescript-ui-listview": "^5.0.1",
     "nativescript-ui-sidedrawer": "^5.1.0",
+    "plotly.js": "^1.39.4",
     "reflect-metadata": "~0.1.8",
     "rxjs": "^6.2.0",
     "tns-core-modules": "~5.0.0",

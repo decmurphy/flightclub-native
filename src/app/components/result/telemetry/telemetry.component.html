@@ -1,0 +1,57 @@
+<div class="container" fxFlexFill fxLayout="column" fxLayout.gt-md="row" fxLayoutGap="20px">
+
+    <div fxFlex fxFlex.gt-md=67 fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap="20px">
+        <div fxFlex>
+            <span class="mat-headline">Orbit</span>
+            <mat-list *ngFor="let st of stageTrajectories">
+                <div *ngIf="st.orbit !== null" fxLayout="column">
+                    <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex>{{st.orbit.toString}}</span></mat-list-item>
+                    <span class="mat-title">Elements</span>
+                    <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex=67>Eccentricity</span><span fxFlex=33>{{round(st.orbit.eccentricity)}}</span></mat-list-item>
+                    <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex=67>Semi-Major Axis</span><span fxFlex=33>{{round(st.orbit.semiMajorAxis)}} km</span></mat-list-item>
+                    <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex=67>Inclination</span><span fxFlex=33>{{round(st.orbit.inclination)}} °</span></mat-list-item>
+                    <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex=67>Longitude of the Ascending Node</span><span fxFlex=33>{{round(st.orbit.longitudeOfTheAscendingNode)}} °</span></mat-list-item>
+                    <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex=67>Argument of Periapsis</span><span fxFlex=33>{{round(st.orbit.argOfPeriapsis)}} °</span></mat-list-item>
+                    <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex=67>True Anomaly</span><span fxFlex=33>{{round(st.orbit.trueAnomaly)}} °</span></mat-list-item>
+                </div>
+            </mat-list>
+        </div>
+
+        <mat-divider vertical class="gold-divider"></mat-divider>
+        <mat-divider fxHide.gt-xs class="gold-divider"></mat-divider>
+
+        <div fxFlex>
+            <span class="mat-headline">Booster Landings</span>
+            <mat-list *ngFor="let st of stageTrajectories">
+                <div *ngIf="st.landing !== null" fxLayout="column">
+                    <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex=67>Stage</span><span fxFlex=33>{{st.stageName}}</span></mat-list-item>
+                    <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex=67>Time</span><span fxFlex=33>{{round(st.landing.time)}} s</span></mat-list-item>
+                    <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex=67>Velocity</span><span fxFlex=33>{{round(st.landing.velocity)}} m/s</span></mat-list-item>
+                    <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex=67>Downrange</span><span fxFlex=33>{{round(st.landing.downrangeDistance)}} km</span></mat-list-item>
+                    <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex=67>Remaining Propellant</span><span fxFlex=33>{{round(st.landing.propellantMass)}} tonnes</span></mat-list-item>
+                </div>
+            </mat-list>
+        </div>
+    </div>
+
+    <mat-divider vertical class="gold-divider"></mat-divider>
+    <mat-divider fxHide.gt-md class="gold-divider"></mat-divider>
+
+    <div fxFlex fxFlex.gt-md=33 fxLayout="column" fxLayoutGap="20px">
+        <div fxFlex *ngIf="warnings.length > 0">
+            <span class="mat-headline">Warnings</span>
+            <mat-list *ngFor="let item of warnings.value" fxLayoutAlign="space-around start">
+                <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex>T<span>{{(item.key | number) > 0 ? "+" : ""}}</span>{{item.key}}</span><span fxFlex>{{item.value}}</span></mat-list-item>
+            </mat-list>
+            <mat-divider vertical class="gold-divider"></mat-divider>
+        </div>
+
+        <div fxFlex>
+            <span class="mat-headline">Events</span>
+            <mat-list *ngFor="let item of eventLog" fxLayoutAlign="space-around start">
+                <mat-list-item fxFlex fxLayoutAlign="space-around start"><span fxFlex>T<span>{{(item.key | number) > 0 ? "+" : ""}}</span>{{item.key}}</span><span fxFlex>{{item.value}}</span></mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+
+</div>

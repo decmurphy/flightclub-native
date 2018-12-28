@@ -1,0 +1,6 @@
+<div fxFlex fxFlexFill style="padding:24px">
+    <mat-grid-list [cols]="numCols | async" mat-row-height="1:1" gutterSize="8px">
+        <mat-grid-tile *ngFor="let plot of resultService.getPlots()" id="{{plot.id}}" rowspan="2" colspan="2">
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

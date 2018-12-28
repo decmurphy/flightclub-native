@@ -1,7 +1,6 @@
 import { Component, OnInit, AfterViewInit, OnDestroy, Input, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
 import * as moment from 'moment';
-import { Chart } from 'chart.js';
 
 import {
   CesiumService
