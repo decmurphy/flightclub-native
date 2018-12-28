@@ -24,18 +24,18 @@
             <StackLayout row=1 class="hr-light m-t-15 m-b-15"></StackLayout>
 
             <FlexBoxLayout row=2 flexDirection=row justifyContent='space-around'>
-                <Button class="btn btn-outline btn-rounded-sm" style="text-align:center;" textWrap="true" nsRouterLink='/about'>
-                    <FormattedString>
-                        <Span class="fa" text="&#xf4fb;" fontSize="40"></Span>
-                        <Span text="&#x000a;&#x000a;" fontSize="10"></Span>
-                        <Span text="About Me" fontSize="18" fontWeight="bold"></Span>
-                    </FormattedString>
-                </Button>
                 <Button class="btn btn-outline btn-rounded-sm" style="text-align:center;" textWrap="true" backgroundColor="#f96854" (tap)="externalRedirect('https://www.patreon.com/flightclub')">
                     <FormattedString>
                         <Span class="fa fa-brand" text="&#xf3d9;" fontSize="40"></Span>
                         <Span text="&#x000a;&#x000a;" fontSize="10"></Span>
                         <Span text="Patreon" fontSize="18" fontWeight="bold"></Span>
+                    </FormattedString>
+                </Button>
+                <Button class="btn btn-outline btn-rounded-sm" style="text-align:center;" textWrap="true" nsRouterLink='/about'>
+                    <FormattedString>
+                        <Span class="fa" text="&#xf4fb;" fontSize="40"></Span>
+                        <Span text="&#x000a;&#x000a;" fontSize="10"></Span>
+                        <Span text="About Me" fontSize="18" fontWeight="bold"></Span>
                     </FormattedString>
                 </Button>
             </FlexBoxLayout>
