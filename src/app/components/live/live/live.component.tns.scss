@@ -1,1 +1,13 @@
-/* Add mobile styles for the component here.  */
+Button {
+    width: 150;
+    height: 120;
+    &:active {
+        opacity: 0.5;
+        &.btn-primary {
+            color: white;
+        }
+        &.btn-outline {
+            color: black;
+        }
+    }
+}

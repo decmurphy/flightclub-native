@@ -9,6 +9,22 @@
             <Label class="h3 m-x-auto" text="will launch in"></Label>
         </StackLayout>
         <Label class="h1" [text]="countdown.days + (countdown.days === 1 ? ' day ' : ' days ') + countdown.hours + ':' + countdown.minutes + ':' + countdown.seconds"></Label>
+        <FlexBoxLayout flexDirection=row justifyContent='space-around'>
+            <Button class="btn btn-primary btn-rounded-sm" style="text-align:center;" textWrap="true" (tap)='view2d()'>
+                <FormattedString>
+                    <Span class="fa m-b-15" text="&#xf080;" fontSize="40"></Span>
+                    <Span text="&#x000a;&#x000a;" fontSize="10"></Span>
+                    <Span text="Telemetry" fontSize="18" fontWeight="bold"></Span>
+                </FormattedString>
+            </Button>
+            <Button class="btn btn-primary btn-rounded-sm" style="text-align:center;" textWrap="true" (tap)='view3d()'>
+                <FormattedString>
+                    <Span class="fa" text="&#xf57c;" fontSize="40"></Span>
+                    <Span text="&#x000a;&#x000a;" fontSize="10"></Span>
+                    <Span text="3D Visualisation" fontSize="18" fontWeight="bold"></Span>
+                </FormattedString>
+            </Button>
+        </FlexBoxLayout>
         <Label class="h5" [text]="'Countdown to ' + simulation?.mission.datetime"></Label>
     </FlexBoxLayout>
 

@@ -139,4 +139,12 @@ export class LiveComponent implements OnInit {
   toggleDrawer(): void {
     this.sidenavService.toggleNav('drawer');
   }
+
+  view2d() {
+
+  }
+
+  view3d() {
+
+  }
 }
