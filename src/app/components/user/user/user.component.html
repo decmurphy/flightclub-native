@@ -1,3 +1,42 @@
-<p>
-  user works!
-</p>
+<div fxFlexFill>
+
+    <mat-sidenav-container fxFlexFill>
+
+        <mat-sidenav #accountSidenav [(mode)]='mode' [(opened)]='opened' fxLayout=column fxLayoutGap=10px>
+
+            <mat-divider></mat-divider>
+
+            <mat-list fxLayout=column fxFlex style="padding:0px">
+                <mat-list-item *ngIf="isLoggedIn()" class="clickable_list" (click)="navigate(['account'])">
+                    <mat-icon style="margin-right:32px">account_circle</mat-icon>
+                    <span>Account Overview</span>
+                    <span fxFlex></span>
+                    <mat-icon [hidden]="routeMatches('')">chevron_right</mat-icon>
+                </mat-list-item>
+                <mat-list-item *ngIf="userService.isMEOPatron()" class="clickable_list" (click)="navigate(['account', 'saved-simulations'])">
+                    <mat-icon style="margin-right:32px">list</mat-icon>
+                    <span>Saved Simulations</span>
+                    <span fxFlex></span>
+                    <mat-icon [hidden]="!routeMatches('saved-simulations')">chevron_right</mat-icon>
+                </mat-list-item>
+                <span fxFlex></span>
+                <mat-list-item *ngIf="isLoggedIn()" class="clickable_list" (click)="logout()">
+                    <mat-icon style="margin-right:32px">exit_to_app</mat-icon>
+                    <span>Logout</span>
+                </mat-list-item>
+            </mat-list>
+
+            <mat-divider></mat-divider>
+
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <button mat-fab fxShow fxHide.gt-sm color=accent class="menu-button" (click)="toggleNav('accountSidenav')">
+                    <mat-icon>view_list</mat-icon>
+                </button>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+
+</div>

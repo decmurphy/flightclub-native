@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
@@ -18,12 +19,16 @@ export class TwoDimVisualisationComponent implements OnInit {
   simulationSubscription: Subscription;
 
   simulation: Simulation;
+  src: string;
 
   constructor(
-        public resultService: ResultService
+        public resultService: ResultService,
+        private route: ActivatedRoute,
+        private router: Router
   ) {
-    this.simulationSubscription = this.resultService.getSimulation().subscribe(s => {
-      this.simulation = s;
+    // this.simulationSubscription = this.resultService.getSimulation().subscribe(s => this.simulation = s);
+    this.route.queryParams.subscribe(params => {
+      this.src = 'https://www.flightclub.io/result/2d?code=' + params['src'];
     });
   }
 

@@ -1,3 +1,37 @@
-<p>
-  account-root works!
-</p>
+<div fxFlexFill fxLayout=column>
+
+    <div fxFlex fxLayoutAlign="center center" *ngIf="loading">
+        <mat-spinner color=accent></mat-spinner>
+    </div>
+
+    <div class=container>
+        <div fxLayout=column *ngIf="!loading && userService.isLoggedIn()">
+            <span class="mat-display-3">
+                Hi {{userService.loggedInUser.patron.fullName.split(" ")[0]}}!
+            </span>
+            <span class="mat-subheading-2" *ngIf="userReward">
+                You are currently a <em><b>{{userReward.title}}</b></em>. Check out the other levels below!
+            </span>
+            <span class="mat-subheading-2" *ngIf="!userReward">
+                It looks like you're not a Flight Club Patron! If you want to support Flight Club in exchange for some sick rewards,
+                just check out the Patreon Reward levels below!
+            </span>
+
+            <div style="padding:24px" fxLayout=column fxLayoutGap=24px>
+                <div fxLayout=column fxLayout.gt-sm=row fxLayoutAlign="start center" fxLayoutGap=24px *ngFor="let reward of rewards">
+                    <button mat-raised-button style="padding:4px" [color]="reward.amount_cents === userReward?.amount_cents ? 'accent':'primary'" (click)='selectReward(reward)'>
+                        <img fxHide.xs src="{{reward.imageUrl}}" alt="{{reward.title}}">
+                        <mat-grid-tile-footer>
+                            <h3 class="mat-title">{{reward.title}}</h3>
+                        </mat-grid-tile-footer>
+                    </button>
+                    <div fxFlex [innerHTML]="reward.description">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

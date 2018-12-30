@@ -3,7 +3,6 @@ import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { Subscription, timer } from 'rxjs';
 import * as moment from 'moment';
 import { Page } from 'tns-core-modules/ui/page';
-import * as utilsModule from 'tns-core-modules/utils/utils';
 
 import {
   Simulation,
@@ -142,7 +141,12 @@ export class LiveComponent implements OnInit {
   }
 
   view2d() {
-
+    const navigationExtras: NavigationExtras = {
+        queryParams: {
+            'code': this.simulation.mission.code
+        }
+    };
+    this.router.navigate(['result', '2d'], navigationExtras);
   }
 
   view3d() {
@@ -151,8 +155,6 @@ export class LiveComponent implements OnInit {
             'code': this.simulation.mission.code
         }
     };
-    // this.router.navigate(['result', '3d'], navigationExtras);
-
-    utilsModule.openUrl('https://www.flightclub.io/result/3d?code=' + this.simulation.mission.code);
+    this.router.navigate(['result', '3d'], navigationExtras);
   }
 }

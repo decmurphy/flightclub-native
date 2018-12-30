@@ -5,8 +5,8 @@
             <AbsoluteLayout row="0">
                 <Image top="15" left="15" class="logo" src="~/assets/img/mobile-icon-lg.png"></Image>
             </AbsoluteLayout>
-            <GridLayout class="login" row="1" columns="*,50" rows="*">
-                <StackLayout orientation="horizontal" col="0" row="0" (tap)="sidenavService.toggleNav('drawer')" nsRouterLink='/account'>
+            <GridLayout class="login" row="1" columns="*,50" rows="*" (tap)="patreonService.loginWithPatreon()">
+                <StackLayout orientation="horizontal" col="0" row="0">
                     <Label text="&#xf4fb;" width="50" class="p-15 fa"></Label>
                     <Label text="Log in" class="p-15"></Label>
                 </StackLayout>

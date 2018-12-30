@@ -1,3 +1,15 @@
-<p>
-  saved-simulations works!
-</p>
+<div class=container>
+    <mat-list fxFlex>
+        <mat-list-item *ngFor="let obj of user.getSavedSims()">
+            <h3 matLine>Mission: {{ obj.mission }}</h3>
+            <h4 matLine>Saved on: {{ obj.prettyTime }}</h4>
+            <p matLine>User Note: {{ obj.usernote }}</p>
+            <button mat-icon-button (click)="loadSimulationFromHash(obj.simHash)" matTooltip="Load Simulation" matTooltipPosition="left">
+                <mat-icon>create</mat-icon>
+            </button>
+            <button mat-icon-button (click)="removeSimulation(obj)" matTooltip="Remove Simulation" matTooltipPosition="left">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </mat-list-item>
+    </mat-list>
+</div>

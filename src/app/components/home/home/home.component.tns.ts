@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Page } from 'tns-core-modules/ui/page';
-import * as utilsModule from 'tns-core-modules/utils/utils';
+import { openUrl } from 'tns-core-modules/utils/utils';
 
 import { isAndroid, isIOS } from 'platform';
 
@@ -43,8 +43,12 @@ export class HomeComponent implements OnInit {
     this.sidenavService.toggleNav('drawer');
   }
 
+  openPatreon() {
+    openUrl('https://www.patreon.com/flightclub');
+  }
+
   externalRedirect(url: string) {
-    utilsModule.openUrl(url);
+    openUrl(url);
   }
 
 }
